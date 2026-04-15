@@ -1,0 +1,703 @@
+import { useState } from "react";
+import { FiExternalLink } from "react-icons/fi";
+import {
+  SiExpo,
+  SiPhp,
+  SiTailwindcss,
+  SiArduino,
+  SiJavascript,
+  SiTypescript,
+  SiMysql,
+  SiMongodb,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiGodotengine,
+  SiPycharm,
+  SiPython,
+  SiExpress,
+  SiCplusplus,
+  SiBootstrap,
+  SiReact,
+  SiHtml5,
+  SiSqlite,
+  SiFramer,
+  SiVite,
+  SiXendit,
+  SiCss,
+  SiSocket,
+  SiInfinityfree,
+  SiGmail,
+  SiTinkercad,
+} from "react-icons/si";
+import { DiNodejs, DiTerminal, DiSublime, DiEclipse } from "react-icons/di";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { FaCode, FaCloud, FaJava, FaProjectDiagram } from "react-icons/fa";
+import { TbBrandReactNative } from "react-icons/tb";
+
+const toolIcons: Record<string, React.ReactNode> = {
+  // Web
+  React: <SiReact className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-400" />,
+  TypeScript: <SiTypescript className="text-blue-600" />,
+  HTML: <SiHtml5 className="text-orange-500" />,
+  CSS: <SiCss className="text-yellow-500" />,
+  PHP: <SiPhp className="text-indigo-500" />,
+  Express: <SiExpress className="text-gray-500" />,
+  NodeJS: <DiNodejs className="text-green-600" />,
+
+  // Styling
+  Tailwind: <SiTailwindcss className="text-sky-400" />,
+  Bootstrap: <SiBootstrap className="text-purple-500" />,
+
+  // Database
+  MySQL: <SiMysql className="text-orange-500" />,
+  MongoDB: <SiMongodb className="text-green-500" />,
+  SQLite: <SiSqlite className="text-blue-400" />,
+
+  // Mobile
+  Expo: <SiExpo className="text-black" />,
+  ReactNative: <TbBrandReactNative className="text-blue-600" />,
+
+  // Game Dev
+  Godot: <SiGodotengine className="text-blue-400" />,
+
+  // Programming
+  Python: <SiPython className="text-blue-600" />,
+  Cpp: <SiCplusplus className="text-blue-700" />,
+  Java: <FaJava className="text-orange-500" />,
+
+  // Tools
+  Git: <SiGit className="text-orange-600" />,
+  GitHub: <SiGithub className="text-black" />,
+  Postman: <SiPostman className="text-orange-500" />,
+  Arduino: <SiArduino className="text-teal-500" />,
+  Cloud: <FaCloud className="text-blue-500" />,
+  Xendit: <SiXendit className="text-blue-500" />,
+  Gmail: <SiGmail className="text-red-500" />,
+  Socket: <SiSocket className="text-pink-500" />,
+  InfinityFree: <SiInfinityfree className="text-purple-500" />,
+  Tinkercad: <SiTinkercad className="text-red-500" />,
+  Diagram: <FaProjectDiagram className="text-white" />,
+
+  // IDEs / Editors
+  VSCode: <VscVscodeInsiders className="text-blue-500" />,
+  Sublime: <DiSublime className="text-orange-400" />,
+  Eclipse: <DiEclipse className="text-purple-600" />,
+  PyCharm: <SiPycharm className="text-green-500" />,
+
+  Framer: <SiFramer className="text-pink-500" />,
+  Vite: <SiVite className="text-purple-500" />,
+
+  // Fallback
+  CLI: <DiTerminal className="text-gray-500" />,
+  Default: <FaCode className="text-gray-400" />,
+};
+
+// CLI Projects
+import IAMC from "../assets/projects/CLI/C++/I AM C++.png";
+import JavaLAb1 from "../assets/projects/CLI/Java/lab1.png";
+import JavaLAb2 from "../assets/projects/CLI/Java/lab2.png";
+import JavaLAb3 from "../assets/projects/CLI/Java/lab3.png";
+import JavaLAb4 from "../assets/projects/CLI/Java/lab4.png";
+import JavaLAb5 from "../assets/projects/CLI/Java/lab5.png";
+import JavaLAb6 from "../assets/projects/CLI/Java/lab6.png";
+import JavaLAb7 from "../assets/projects/CLI/Java/lab7.png";
+import JavaLAb8 from "../assets/projects/CLI/Java/lab8.png";
+import JavaLAb9 from "../assets/projects/CLI/Java/lab9.png";
+import JavaLAb10 from "../assets/projects/CLI/Java/lab10.png";
+import Alerts from "../assets/projects/CLI/Python/Alerts.png";
+import ChatBot from "../assets/projects/CLI/Python/ChatBot.png";
+import Grammar from "../assets/projects/CLI/Python/Grammar.png";
+import GrinProgram from "../assets/projects/CLI/Python/Grin Program.png";
+import MutantRPG from "../assets/projects/CLI/Python/Mutant RPG.png";
+import MyAnimalDictionary from "../assets/projects/CLI/Python/My Animal Dictionary.png";
+import PersonalData from "../assets/projects/CLI/Python/Personal Data.png";
+import QueenState from "../assets/projects/CLI/Python/QueenState.png";
+import Registration from "../assets/projects/CLI/Python/Registration.png";
+import TkinterForm from "../assets/projects/CLI/Python/Tkinter Form.png";
+
+// Diagram Projects
+import SmartPathFITDFDLEVEL2 from "../assets/projects/Design/Smark Tracking PATHFIT APPLICATION DIAGRAM LEVEL 2 DFD.jpg";
+import SmartBurialDFDLEVEL2 from "../assets/projects/Design/Smart Tracking Burial APPLICATION DIAGRAM LEVEL 2 DFD.png";
+
+// Game Projects
+import ComputerMatchMakingGame from "../assets/projects/Games/Computer Match Making Game.png";
+import FoodMatchMakingGame from "../assets/projects/Games/Food Match Making Game.png";
+import PlatformerGame from "../assets/projects/Games/Platformer Game.png";
+
+// IoT Projects
+import CO2ConcentrationIndicator from "../assets/projects/Simulation/CO2 Concentration Indicator.png";
+import FireAlarmDetector from "../assets/projects/Simulation/Fire Alarm Detector.png";
+import HelloWorldLCD from "../assets/projects/Simulation/Hello World 16 x 2.png";
+import ObstacleDetector from "../assets/projects/Simulation/Obstacle Detector.png";
+import WeatherStation from "../assets/projects/Simulation/Weather Station.png";
+
+// Mobile Projects
+import MyRecipe from "../assets/projects/Mobiles/My Recipe.jpg";
+
+// Website Projects
+import AnimeWebsite from "../assets/projects/Websites/Anime Website/desktop/cover.png";
+import ArtGallery from "../assets/projects/Websites/Art-Gallery/desktop/cover.png";
+import BarangayInfoSystem from "../assets/projects/Websites/Barangay Infosys/desktop/cover.png";
+import FreshNest from "../assets/projects/Websites/E-Grocery/desktop/cover.png";
+import EHomes5BookingSystem from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover.png";
+import GraduatesEbook from "../assets/projects/Websites/Graduates E-book/desktop/cover.png";
+import InformationHub from "../assets/projects/Websites/Information Hub/desktop/cover.png";
+import FirstPortfolio from "../assets/projects/Websites/Mark's First Portfolio Website/desktop/cover.png";
+import FreelancePortfolio from "../assets/projects/Websites/Mark's Freelance Website/cover.png";
+import NailsBeautyAndBeyond from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover.png";
+import OrgMerchWebsite from "../assets/projects/Websites/OrgMerch Website/desktop/cover.png";
+import SmartWeather from "../assets/projects/Websites/Smart Weather/desktop/cover.png";
+
+// Reusable Components
+import CategoryContainer from "../components/categorycont";
+import Button from "../components/button";
+
+const projects = [
+  {
+    img: BarangayInfoSystem,
+    title: "Barangay Information System",
+    desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency.",
+    category: "Website",
+    link: "a",
+    tools: [
+      "HTML",
+      "Bootstrap",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Xendit",
+      "InfinityFree",
+    ],
+  },
+  {
+    img: FreelancePortfolio,
+    title: "Codex Intel - Freelance Portfolio Website",
+    desc: "A freelance portfolio website showcasing projects, skills, and credentials with a modern and responsive UI design.",
+    category: "Website",
+    link: "https://mark-daniel-partoza-portfolio-v-1.vercel.app/",
+    tools: ["React", "Framer", "Vite", "Tailwind", "Gmail"],
+  },
+  {
+    img: GraduatesEbook,
+    title: "Graduates E-Book",
+    desc: "A digital publication system designed to present graduate profiles and achievements in an organized e-book format.",
+    category: "Website",
+    link: "https://graduates-ebook-management.vercel.app/",
+    tools: [
+      "React",
+      "Bootstrap",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "NodeJS",
+      "Socket",
+    ],
+  },
+  {
+    img: FirstPortfolio,
+    title: "BitX4587 - First Website Portfolio",
+    desc: "An early-stage portfolio project showcasing foundational web development skills and UI structuring.",
+    category: "Website",
+    link: "https://bitx4587.github.io/PORTFOLIO-1/",
+    tools: ["HTML", "CSS", "JavaScript", "GitHub"],
+  },
+  {
+    img: AnimeWebsite,
+    title: "Anime Page",
+    desc: "A themed website displaying anime collections with interactive UI components and responsive design.",
+    category: "Website",
+    link: "https://bitx4587.github.io/ANIME-WEBSITE/",
+    tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
+  },
+  {
+    img: ArtGallery,
+    title: "Digital Art Gallery",
+    desc: "A responsive gallery platform for showcasing digital artworks with clean UI presentation and categorization.",
+    category: "Website",
+    link: "https://art-gallery-system.is-great.org/Art_Collection_System/src/index.php",
+    tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
+  },
+  {
+    img: FreshNest,
+    title: "FreshNest E-Commerce",
+    desc: "A modern e-commerce frontend design focused on clean product presentation and user-friendly navigation.",
+    category: "Website",
+    link: "https://bitx4587.github.io/E-Grocery",
+    tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
+  },
+  {
+    img: EHomes5BookingSystem,
+    title: "E-Homes 5 Apartment",
+    desc: "A rental management system for apartment bookings, tenant tracking, and unit availability management.",
+    category: "Website",
+    link: "https://e-homes-5-apartment.great-site.net/src/index.php?i=1",
+    tools: [
+      "HTML",
+      "Bootstrap",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Gmail",
+      "InfinityFree",
+    ],
+  },
+  {
+    img: InformationHub,
+    title: "Information Hub Portal",
+    desc: "A centralized information system for organizing and accessing structured data efficiently.",
+    category: "Website",
+    link: "https://information-hub-system.great-site.net/",
+    tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
+  },
+  {
+    img: NailsBeautyAndBeyond,
+    title: "Nails Beauty & Beyond",
+    desc: "A service booking system for salon appointments with scheduling and service management features.",
+    category: "Website",
+    link: "https://hair-nails-and-beyond.is-best.net/beyond/src/index.php",
+    tools: [
+      "HTML",
+      "Bootstrap",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Gmail",
+      "InfinityFree",
+    ],
+  },
+  {
+    img: OrgMerchWebsite,
+    title: "OrgMerch Store",
+    desc: "An online store interface for showcasing and managing organizational merchandise products.",
+    category: "Website",
+    link: "https://org-merch.great-site.net/src/index.php",
+    tools: [
+      "HTML",
+      "Bootstrap",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Xendit",
+      "InfinityFree",
+    ],
+  },
+  {
+    img: SmartWeather,
+    title: "Smart Weather",
+    desc: "A weather information web app displaying real-time weather updates and forecasts.",
+    category: "Website",
+    link: "https://bitx4587.github.io/Weather-App/",
+    tools: ["HTML", "Tailwind", "JavaScript", "GitHub"],
+  },
+
+  {
+    img: IAMC,
+    title: "Shopping Game - CLI",
+    desc: "A terminal-based story driven shopping game for managing and tracking items using command-line interaction.",
+    category: "CLI",
+    link: "#",
+    tools: ["Cpp", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb1,
+    title: "Java Lab 1 – Introduction to Java",
+    desc: "Basic Java programming exercises covering syntax, variables, and input/output operations.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb2,
+    title: "Java Lab 2 – Control Structures",
+    desc: "Exercises focused on conditional statements and looping structures in Java.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb3,
+    title: "Java Lab 3 – Arrays and Strings",
+    desc: "Practice on array manipulation and string handling in Java.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb4,
+    title: "Java Lab 4 – Methods and Functions",
+    desc: "Implementation of reusable methods and function-based programming concepts.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb5,
+    title: "Java Lab 5 – Object-Oriented Basics",
+    desc: "Introduction to OOP concepts including classes and objects.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb6,
+    title: "Java Lab 6 – Inheritance",
+    desc: "Practice on inheritance and code reusability in object-oriented programming.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb7,
+    title: "Java Lab 7 – Polymorphism",
+    desc: "Exercises on method overriding and polymorphism concepts.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb8,
+    title: "Java Lab 8 – Exception Handling",
+    desc: "Handling runtime errors using try-catch and exception handling techniques.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb9,
+    title: "Java Lab 9 – Email GUI System",
+    desc: "Developed a Gmail-like email interface using Java GUI, featuring message composition, inbox-style layout, and basic email interaction functionality with event handling.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: JavaLAb10,
+    title: "Java Lab 10 – Final Project Exercise",
+    desc: "Final laboratory exercise combining all learned Java programming concepts.",
+    category: "CLI",
+    link: "#",
+    tools: ["Java", "Eclipse", "CLI", "Default"],
+  },
+  {
+    img: Alerts,
+    title: "Python Alerts System - CLI",
+    desc: "A simple python-based alert system demonstrating event handling and notifications.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: ChatBot,
+    title: "Python Chatbot Console App - CLI",
+    desc: "A basic console-based chatbot system using Python logic and input handling.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: Grammar,
+    title: "Grammar Checker Tool - CLI",
+    desc: "A rule-based grammar checking program implemented in Python.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: GrinProgram,
+    title: "Grin Utility Program - CLI",
+    desc: "A small utility program demonstrating structured programming concepts in Python.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: MutantRPG,
+    title: "Mutant RPG Console Game - CLI",
+    desc: "A text-based RPG game built using Python showcasing logic, combat, and decision-making systems.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: MyAnimalDictionary,
+    title: "My Animal Dictionary - CLI",
+    desc: "A simple dictionary application that stores and retrieves animal information via terminal.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: PersonalData,
+    title: "Personal Data Management System",
+    desc: "A CLI-based system for storing and managing personal data records.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: QueenState,
+    title: "Queen State Problem Solver",
+    desc: "A logic-based problem-solving program using algorithmic approaches in Python.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: Registration,
+    title: "Student Registration System",
+    desc: "A CLI registration system for managing student enrollment data.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default"],
+  },
+  {
+    img: TkinterForm,
+    title: "Python Tkinter Form App",
+    desc: "A GUI-based form application built using Python Tkinter for user input handling.",
+    category: "CLI",
+    link: "#",
+    tools: ["PyCharm", "Python", "CLI", "Default", "Tkinter"],
+  },
+
+  {
+    img: MyRecipe,
+    title: "My Recipe",
+    desc: "A mobile recipe management app featuring offline storage, OCR-based text scanning, recipe categorization, and an interactive UI with expandable and collapsible recipe cards for better organization and accessibility.",
+    category: "Mobile",
+    link: "#",
+    tools: ["ReactNative", "SQLite", "Expo"],
+  },
+
+  {
+    img: ComputerMatchMakingGame,
+    title: "Computer Matchmaking Game",
+    desc: "An educational game that matches computer components with their correct functions.",
+    category: "Games",
+    link: "#",
+    tools: ["Python", "PyCharm"],
+  },
+  {
+    img: FoodMatchMakingGame,
+    title: "Food Matching Game",
+    desc: "A fun memory-based matching game involving food items and categories.",
+    category: "Games",
+    link: "#",
+    tools: ["Python", "PyCharm"],
+  },
+  {
+    img: PlatformerGame,
+    title: "2D Platformer Game",
+    desc: "A simple 2D platformer featuring movement mechanics, levels, and obstacles.",
+    category: "Games",
+    link: "#",
+    tools: ["Python", "PyCharm"],
+  },
+
+  {
+    img: CO2ConcentrationIndicator,
+    title: "CO₂ Concentration Indicator",
+    desc: "An IoT system that monitors and displays CO₂ levels using sensor-based input.",
+    category: "IoT",
+    link: "https://www.tinkercad.com/things/e9VWD5oKaWQ-co2-concentration-indicator",
+    tools: ["Arduino", "Cpp", "Tinkercad"],
+  },
+  {
+    img: FireAlarmDetector,
+    title: "Fire Alarm Detection System",
+    desc: "An Arduino-based fire detection system that triggers alerts when smoke or heat is detected.",
+    category: "IoT",
+    link: "https://www.tinkercad.com/things/1C9Lt3EVcvF-fire-alarm-detector?sharecode=y9_IcFXJ0J53n5E_jCF_o9ZP1jzKUJrHCd5DhQS1Z4c",
+    tools: ["Arduino", "Cpp", "Tinkercad"],
+  },
+  {
+    img: HelloWorldLCD,
+    title: "LCD Display System",
+    desc: "A basic Arduino project displaying text output on an LCD screen.",
+    category: "IoT",
+    link: "https://www.tinkercad.com/things/4KuG9XeFVnx-hello-world-16-x-2",
+    tools: ["Arduino", "Cpp", "Tinkercad"],
+  },
+  {
+    img: ObstacleDetector,
+    title: "Obstacle Detection System",
+    desc: "An IoT-based system that detects obstacles using ultrasonic sensors.",
+    category: "IoT",
+    link: "https://www.tinkercad.com/things/fmVng5FDEzT-obstacle-detector",
+    tools: ["Arduino", "Cpp", "Tinkercad"],
+  },
+  {
+    img: WeatherStation,
+    title: "Smart Weather Station",
+    desc: "An IoT weather monitoring system tracking temperature and humidity in real-time.",
+    category: "IoT",
+    link: "https://www.tinkercad.com/things/iN7GpE38AWv-weather-station",
+    tools: ["Arduino", "Cpp", "Tinkercad"],
+  },
+
+  {
+    img: SmartPathFITDFDLEVEL2,
+    title: "Smart PathFIT System DFD - Level 2",
+    desc: "A structured data flow diagram representing the Smart PathFIT System processes.",
+    category: "Diagrams",
+    link: "#",
+    tools: ["Diagram"],
+  },
+  {
+    img: SmartBurialDFDLEVEL2,
+    title: "Smart Burial System DFD - Level 2",
+    desc: "A structured data flow diagram representing the Smart Burial System processes.",
+    category: "Diagrams",
+    link: "#",
+    tools: ["Diagram"],
+  },
+];
+
+const categories = [
+  "All",
+  "Website",
+  "Mobile",
+  "Games",
+  "CLI",
+  "IoT",
+  "Diagrams",
+];
+
+function Projects({ expanded }: { expanded: boolean }) {
+  const [category, setCategory] = useState("All");
+
+  const filteredProjects =
+    category === "All"
+      ? projects
+      : projects.filter((p) => p.category === category);
+
+  return (
+    <div className="grid grid-cols-1 place-items-center">
+      {/* PREVIEW MODE (ONLY FIRST PROJECT) */}
+      {!expanded && (
+        <div className="relative max-w-xl mx-auto border hover:transition duration-300 cursor-pointer">
+          <h1 className="text-xl font-bold text-center m-3">My Projects</h1>
+          <img
+            src={projects[0].img}
+            alt={projects[0].title}
+            className="w-full"
+          />
+          <div className="relative max-w-xl mx-auto border">
+            {projects[0].link && projects[0].link !== "#" && (
+              <a
+                href={projects[0].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-2 right-2 bg-black/60 hover:bg-blue-600 
+      text-white p-2 rounded-full backdrop-blur-sm 
+      transition duration-300 shadow-md"
+              >
+                <FiExternalLink size={18} />
+              </a>
+            )}
+          </div>
+
+          <div className="text-center md:text-justify">
+            {/* TOOL ICONS */}
+            <div className="flex gap-2 justify-center text-2xl border p-2">
+              {projects[0].tools?.map((tool, i) => (
+                <div key={i} className="hover:scale-110 transition">
+                  {toolIcons[tool]}
+                </div>
+              ))}
+            </div>
+            <div className="p-5">
+              <h3 className="font-semibold">{projects[0].title}</h3>
+              <p className="mt-1 text-gray-600 text-sm">{projects[0].desc}</p>
+            </div>
+          </div>
+        </div>
+      )}
+      {expanded && (
+        <>
+          {/* GRID */}
+          <div className="grid grid-cols-1 mx-5">
+            <h1 className="text-xl font-bold text-center mt-3">My Projects</h1>
+            {/* CATEGORY BUTTONS */}
+            <CategoryContainer classname="flex my-4 gap-2 flex-wrap justify-center">
+              {categories.map((cat) => (
+                <Button
+                  key={cat}
+                  onClick={() => setCategory(cat)}
+                  className={`px-4 py-2 rounded ${
+                    category === cat
+                      ? "bg-black text-white"
+                      : "bg-gray-200 text-gray-700"
+                  } hover:cursor-pointer`}
+                >
+                  {cat}
+                </Button>
+              ))}
+            </CategoryContainer>
+            {filteredProjects.map((project, index) => (
+              <div
+                className="relative max-w-xl mx-auto border my-5"
+                key={index}
+              >
+                <div className="relative max-w-xl mx-auto border" key={index}>
+                  {project.link && project.link !== "#" ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="w-full hover:cursor-pointer"
+                        src={project.img}
+                        alt={project.title}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      className="w-full"
+                      src={project.img}
+                      alt={project.title}
+                    />
+                  )}
+
+                  {project.link && project.link !== "#" && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 bg-black/60 hover:bg-blue-600 
+      text-white p-2 rounded-full backdrop-blur-sm 
+      transition duration-300 shadow-md"
+                    >
+                      <FiExternalLink size={18} />
+                    </a>
+                  )}
+                </div>
+                <div className="text-center md:text-justify">
+                  {/* TOOL ICONS */}
+                  <div className="flex gap-2 justify-center text-2xl border p-2">
+                    {project.tools?.map((tool, i) => (
+                      <div
+                        key={i}
+                        className="hover:scale-110 transition cursor-pointer"
+                      >
+                        {toolIcons[tool]}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-semibold">{project.title}</h3>
+                    <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default Projects;
