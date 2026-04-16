@@ -35,21 +35,21 @@ function App() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 md:my-5">
                 <div
-                  className="md:ml-auto md:w-[90%] border md:mx-2 md:rounded-lg"
+                  className="md:ml-auto md:w-[90%] border md:mx-2 rounded-lg"
                   onClick={() => open("credentials")}
                 >
                   <Credentials expanded={false} />
                 </div>
 
                 <div
-                  className="border my-5 md:hidden"
+                  className="border my-5 md:hidden rounded-lg"
                   onClick={() => open("about")}
                 >
                   <About expanded={false} />
                 </div>
 
                 <div
-                  className="md:mr-auto md:w-[90%] border md:mx-2 md:rounded-lg"
+                  className="md:mr-auto md:w-[90%] border md:mx-2 rounded-lg"
                   onClick={() => open("projects")}
                 >
                   <Projects expanded={false} />

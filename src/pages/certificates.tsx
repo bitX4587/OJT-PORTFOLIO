@@ -78,7 +78,7 @@ function certificates({ expanded }: { expanded: boolean }) {
     <>
       {!expanded && (
         <div className="grid grid-cols-1">
-          <div className="border md:rounded-lg max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
+          <div className="border rounded-lg max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
             <h1 className="text-xl font-bold text-center m-3">
               My Certificates
             </h1>

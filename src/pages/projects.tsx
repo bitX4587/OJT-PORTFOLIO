@@ -35,6 +35,8 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 import { FaCode, FaCloud, FaJava, FaProjectDiagram } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 
+import ImageSlider from "../components/imageslider";
+
 const toolIcons: Record<string, React.ReactNode> = {
   // Web
   React: <SiReact className="text-blue-500" />,
@@ -156,7 +158,7 @@ import Button from "../components/button";
 
 const projects = [
   {
-    img: BarangayInfoSystem,
+    images: [BarangayInfoSystem],
     title: "Barangay Information System",
     desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency. It enhances efficiency by providing a structured and user-friendly interface for handling data and better service delivery within the barangay.",
     category: "Website",
@@ -172,7 +174,7 @@ const projects = [
     ],
   },
   {
-    img: FreelancePortfolio,
+    images: [FreelancePortfolio],
     title: "Codex Intel - Freelance Portfolio Website",
     desc: "A freelance portfolio website showcasing projects, skills, and credentials with a modern and responsive UI design.",
     category: "Website",
@@ -180,7 +182,7 @@ const projects = [
     tools: ["React", "Framer", "Vite", "Tailwind", "Gmail"],
   },
   {
-    img: GraduatesEbook,
+    images: [GraduatesEbook],
     title: "Graduates E-Book",
     desc: "A digital publication system designed to present graduate profiles and achievements in an organized e-book format.",
     category: "Website",
@@ -196,7 +198,7 @@ const projects = [
     ],
   },
   {
-    img: FirstPortfolio,
+    images: [FirstPortfolio],
     title: "BitX4587 - First Website Portfolio",
     desc: "An early-stage portfolio project showcasing foundational web development skills and UI structuring.",
     category: "Website",
@@ -204,7 +206,7 @@ const projects = [
     tools: ["HTML", "CSS", "JavaScript", "GitHub"],
   },
   {
-    img: AnimeWebsite,
+    images: [AnimeWebsite],
     title: "Anime Page",
     desc: "A themed website displaying anime collections with interactive UI components and responsive design.",
     category: "Website",
@@ -212,7 +214,7 @@ const projects = [
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
-    img: ArtGallery,
+    images: [ArtGallery],
     title: "Digital Art Gallery",
     desc: "A responsive gallery platform for showcasing digital artworks with clean UI presentation and categorization.",
     category: "Website",
@@ -220,7 +222,7 @@ const projects = [
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
   },
   {
-    img: FreshNest,
+    images: [FreshNest],
     title: "FreshNest E-Commerce",
     desc: "A modern e-commerce frontend design focused on clean product presentation and user-friendly navigation.",
     category: "Website",
@@ -228,7 +230,7 @@ const projects = [
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
-    img: EHomes5BookingSystem,
+    images: [EHomes5BookingSystem],
     title: "E-Homes 5 Apartment",
     desc: "A rental management system for apartment bookings, tenant tracking, and unit availability management.",
     category: "Website",
@@ -244,7 +246,7 @@ const projects = [
     ],
   },
   {
-    img: InformationHub,
+    images: [InformationHub],
     title: "Information Hub Portal",
     desc: "A centralized information system for organizing and accessing structured data efficiently.",
     category: "Website",
@@ -252,7 +254,7 @@ const projects = [
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
   },
   {
-    img: NailsBeautyAndBeyond,
+    images: [NailsBeautyAndBeyond],
     title: "Nails Beauty & Beyond",
     desc: "A service booking system for salon appointments with scheduling and service management features.",
     category: "Website",
@@ -268,7 +270,7 @@ const projects = [
     ],
   },
   {
-    img: OrgMerchWebsite,
+    images: [OrgMerchWebsite],
     title: "OrgMerch Store",
     desc: "An online store interface for showcasing and managing organizational merchandise products.",
     category: "Website",
@@ -284,7 +286,7 @@ const projects = [
     ],
   },
   {
-    img: SmartWeather,
+    images: [SmartWeather],
     title: "Smart Weather",
     desc: "A weather information web app displaying real-time weather updates and forecasts.",
     category: "Website",
@@ -293,7 +295,7 @@ const projects = [
   },
 
   {
-    img: IAMC,
+    images: [IAMC],
     title: "Shopping Game - CLI",
     desc: "A terminal-based story driven shopping game for managing and tracking items using command-line interaction.",
     category: "CLI",
@@ -301,7 +303,7 @@ const projects = [
     tools: ["Cpp", "CLI", "Default"],
   },
   {
-    img: JavaLAb1,
+    images: [JavaLAb1],
     title: "Java Lab 1 – Introduction to Java",
     desc: "Basic Java programming exercises covering syntax, variables, and input/output operations.",
     category: "CLI",
@@ -309,7 +311,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb2,
+    images: [JavaLAb2],
     title: "Java Lab 2 – Control Structures",
     desc: "Exercises focused on conditional statements and looping structures in Java.",
     category: "CLI",
@@ -317,7 +319,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb3,
+    images: [JavaLAb3],
     title: "Java Lab 3 – Arrays and Strings",
     desc: "Practice on array manipulation and string handling in Java.",
     category: "CLI",
@@ -325,7 +327,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb4,
+    images: [JavaLAb4],
     title: "Java Lab 4 – Methods and Functions",
     desc: "Implementation of reusable methods and function-based programming concepts.",
     category: "CLI",
@@ -333,7 +335,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb5,
+    images: [JavaLAb5],
     title: "Java Lab 5 – Object-Oriented Basics",
     desc: "Introduction to OOP concepts including classes and objects.",
     category: "CLI",
@@ -341,7 +343,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb6,
+    images: [JavaLAb6],
     title: "Java Lab 6 – Inheritance",
     desc: "Practice on inheritance and code reusability in object-oriented programming.",
     category: "CLI",
@@ -349,7 +351,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb7,
+    images: [JavaLAb7],
     title: "Java Lab 7 – Polymorphism",
     desc: "Exercises on method overriding and polymorphism concepts.",
     category: "CLI",
@@ -357,7 +359,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb8,
+    images: [JavaLAb8],
     title: "Java Lab 8 – Exception Handling",
     desc: "Handling runtime errors using try-catch and exception handling techniques.",
     category: "CLI",
@@ -365,7 +367,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb9,
+    images: [JavaLAb9],
     title: "Java Lab 9 – Email GUI System",
     desc: "Developed a Gmail-like email interface using Java GUI, featuring message composition, inbox-style layout, and basic email interaction functionality with event handling.",
     category: "CLI",
@@ -373,7 +375,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: JavaLAb10,
+    images: [JavaLAb10],
     title: "Java Lab 10 – Final Project Exercise",
     desc: "Final laboratory exercise combining all learned Java programming concepts.",
     category: "CLI",
@@ -381,7 +383,7 @@ const projects = [
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
   {
-    img: Alerts,
+    images: [Alerts],
     title: "Python Alerts System - CLI",
     desc: "A simple python-based alert system demonstrating event handling and notifications.",
     category: "CLI",
@@ -389,7 +391,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: ChatBot,
+    images: [ChatBot],
     title: "Python Chatbot Console App - CLI",
     desc: "A basic console-based chatbot system using Python logic and input handling.",
     category: "CLI",
@@ -397,7 +399,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: Grammar,
+    images: [Grammar],
     title: "Grammar Checker Tool - CLI",
     desc: "A rule-based grammar checking program implemented in Python.",
     category: "CLI",
@@ -405,7 +407,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: GrinProgram,
+    images: [GrinProgram],
     title: "Grin Utility Program - CLI",
     desc: "A small utility program demonstrating structured programming concepts in Python.",
     category: "CLI",
@@ -413,7 +415,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: MutantRPG,
+    images: [MutantRPG],
     title: "Mutant RPG Console Game - CLI",
     desc: "A text-based RPG game built using Python showcasing logic, combat, and decision-making systems.",
     category: "CLI",
@@ -421,7 +423,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: MyAnimalDictionary,
+    images: [MyAnimalDictionary],
     title: "My Animal Dictionary - CLI",
     desc: "A simple dictionary application that stores and retrieves animal information via terminal.",
     category: "CLI",
@@ -429,7 +431,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: PersonalData,
+    images: [PersonalData],
     title: "Personal Data Management System",
     desc: "A CLI-based system for storing and managing personal data records.",
     category: "CLI",
@@ -437,7 +439,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: QueenState,
+    images: [QueenState],
     title: "Queen State Problem Solver",
     desc: "A logic-based problem-solving program using algorithmic approaches in Python.",
     category: "CLI",
@@ -445,7 +447,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: Registration,
+    images: [Registration],
     title: "Student Registration System",
     desc: "A CLI registration system for managing student enrollment data.",
     category: "CLI",
@@ -453,7 +455,7 @@ const projects = [
     tools: ["PyCharm", "Python", "CLI", "Default"],
   },
   {
-    img: TkinterForm,
+    images: [TkinterForm],
     title: "Python Tkinter Form App",
     desc: "A GUI-based form application built using Python Tkinter for user input handling.",
     category: "CLI",
@@ -462,7 +464,7 @@ const projects = [
   },
 
   {
-    img: MyRecipe,
+    images: [MyRecipe],
     title: "My Recipe",
     desc: "A mobile recipe management app featuring offline storage, OCR-based text scanning, recipe categorization, and an interactive UI with expandable and collapsible recipe cards for better organization and accessibility.",
     category: "Mobile",
@@ -471,7 +473,7 @@ const projects = [
   },
 
   {
-    img: ComputerMatchMakingGame,
+    images: [ComputerMatchMakingGame],
     title: "Computer Matchmaking Game",
     desc: "An educational game that matches computer components with their correct functions.",
     category: "Games",
@@ -479,7 +481,7 @@ const projects = [
     tools: ["Python", "PyCharm"],
   },
   {
-    img: FoodMatchMakingGame,
+    images: [FoodMatchMakingGame],
     title: "Food Matching Game",
     desc: "A fun memory-based matching game involving food items and categories.",
     category: "Games",
@@ -487,7 +489,7 @@ const projects = [
     tools: ["Python", "PyCharm"],
   },
   {
-    img: PlatformerGame,
+    images: [PlatformerGame],
     title: "2D Platformer Game",
     desc: "A simple 2D platformer featuring movement mechanics, levels, and obstacles.",
     category: "Games",
@@ -496,7 +498,7 @@ const projects = [
   },
 
   {
-    img: CO2ConcentrationIndicator,
+    images: [CO2ConcentrationIndicator],
     title: "CO₂ Concentration Indicator",
     desc: "An IoT system that monitors and displays CO₂ levels using sensor-based input.",
     category: "IoT",
@@ -504,7 +506,7 @@ const projects = [
     tools: ["Arduino", "Cpp", "Tinkercad"],
   },
   {
-    img: FireAlarmDetector,
+    images: [FireAlarmDetector],
     title: "Fire Alarm Detection System",
     desc: "An Arduino-based fire detection system that triggers alerts when smoke or heat is detected.",
     category: "IoT",
@@ -512,7 +514,7 @@ const projects = [
     tools: ["Arduino", "Cpp", "Tinkercad"],
   },
   {
-    img: HelloWorldLCD,
+    images: [HelloWorldLCD],
     title: "LCD Display System",
     desc: "A basic Arduino project displaying text output on an LCD screen.",
     category: "IoT",
@@ -520,7 +522,7 @@ const projects = [
     tools: ["Arduino", "Cpp", "Tinkercad"],
   },
   {
-    img: ObstacleDetector,
+    images: [ObstacleDetector],
     title: "Obstacle Detection System",
     desc: "An IoT-based system that detects obstacles using ultrasonic sensors.",
     category: "IoT",
@@ -528,7 +530,7 @@ const projects = [
     tools: ["Arduino", "Cpp", "Tinkercad"],
   },
   {
-    img: WeatherStation,
+    images: [WeatherStation],
     title: "Smart Weather Station",
     desc: "An IoT weather monitoring system tracking temperature and humidity in real-time.",
     category: "IoT",
@@ -537,7 +539,7 @@ const projects = [
   },
 
   {
-    img: SmartPathFITDFDLEVEL2,
+    images: [SmartPathFITDFDLEVEL2],
     title: "Smart PathFIT System DFD - Level 2",
     desc: "A structured data flow diagram representing the Smart PathFIT System processes.",
     category: "Diagrams",
@@ -545,7 +547,7 @@ const projects = [
     tools: ["Diagram"],
   },
   {
-    img: SmartBurialDFDLEVEL2,
+    images: [SmartBurialDFDLEVEL2],
     title: "Smart Burial System DFD - Level 2",
     desc: "A structured data flow diagram representing the Smart Burial System processes.",
     category: "Diagrams",
@@ -566,6 +568,7 @@ const categories = [
 
 function Projects({ expanded }: { expanded: boolean }) {
   const [category, setCategory] = useState("All");
+  const [activeIndex, setActiveIndex] = useState(0); // 👈 add this
 
   const filteredProjects =
     category === "All"
@@ -574,127 +577,107 @@ function Projects({ expanded }: { expanded: boolean }) {
 
   return (
     <div className="grid grid-cols-1 place-items-center">
-      {/* PREVIEW MODE (ONLY FIRST PROJECT) */}
+      {/* PREVIEW MODE */}
       {!expanded && (
-        <div className="relative max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
+        <div className="relative w-full max-w-lg mx-auto cursor-pointer">
+          {" "}
+          {/* 👈 max-w-sm */}
           <h1 className="text-xl font-bold text-center m-3">My Projects</h1>
-          <img
-            src={projects[0].img}
-            alt={projects[0].title}
-            className="w-full"
+          <ImageSlider
+            images={projects.map((p) => p.images[0])} // 👈 one cover per project
+            autoPlay={true}
+            showNavigation={false}
+            interactive={false}
+            onSlideChange={setActiveIndex}
           />
-          <div className="relative max-w-xl mx-auto border">
-            {projects[0].link && projects[0].link !== "#" && (
-              <a
-                href={projects[0].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 right-2 bg-black/60 hover:bg-blue-600 
-      text-white p-2 rounded-full backdrop-blur-sm 
-      transition duration-300 shadow-md"
-              >
-                <FiExternalLink size={18} />
-              </a>
-            )}
-          </div>
-
           <div className="text-center md:text-justify">
-            {/* TOOL ICONS */}
-            <div className="flex gap-2 justify-center text-2xl border p-2">
-              {projects[0].tools?.map((tool, i) => (
-                <div key={i} className="hover:scale-110 transition">
-                  {toolIcons[tool]}
-                </div>
-              ))}
+            <div className="flex gap-2 justify-center text-2xl border p-2 flex-wrap">
+              {projects[activeIndex].tools?.map(
+                (
+                  tool,
+                  i, // 👈 use activeIndex
+                ) => (
+                  <div key={i} className="hover:scale-110 transition">
+                    {toolIcons[tool]}
+                  </div>
+                ),
+              )}
             </div>
             <div className="p-5">
-              <h3 className="font-semibold">{projects[0].title}</h3>
-              <p className="mt-1 text-gray-600 text-sm">{projects[0].desc}</p>
+              <h3 className="font-semibold">{projects[activeIndex].title}</h3>{" "}
+              {/* 👈 */}
+              <p className="mt-1 text-gray-600 text-sm">
+                {projects[activeIndex].desc}
+              </p>{" "}
+              {/* 👈 */}
             </div>
           </div>
         </div>
       )}
-      {expanded && (
-        <>
-          {/* GRID */}
-          <div className="grid grid-cols-1 mx-5">
-            <h1 className="text-xl font-bold text-center mt-3">My Projects</h1>
-            {/* CATEGORY BUTTONS */}
-            <CategoryContainer classname="flex mt-4 mb-2 gap-2 flex-wrap justify-center">
-              {categories.map((cat) => (
-                <Button
-                  key={cat}
-                  onClick={() => setCategory(cat)}
-                  className={`p-2 md:px-4 md:py-2 rounded ${
-                    category === cat
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-700"
-                  } hover:cursor-pointer`}
-                >
-                  {cat}
-                </Button>
-              ))}
-            </CategoryContainer>
-            {filteredProjects.map((project, index) => (
-              <div
-                className="relative max-w-xl mx-auto border my-3 rounded-lg"
-                key={index}
-              >
-                <div className="relative max-w-xl mx-auto" key={index}>
-                  {project.link && project.link !== "#" ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        className="w-full rounded-t-lg hover:cursor-pointer"
-                        src={project.img}
-                        alt={project.title}
-                      />
-                    </a>
-                  ) : (
-                    <img
-                      className="w-full rounded-t-lg"
-                      src={project.img}
-                      alt={project.title}
-                    />
-                  )}
 
-                  {project.link && project.link !== "#" && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute bottom-2 right-2 bg-black/60 hover:bg-blue-600 
-      text-white p-2 rounded-full backdrop-blur-sm 
-      transition duration-300 shadow-md"
+      {/* EXPANDED MODE */}
+      {expanded && (
+        <div className="grid grid-cols-1 mx-5">
+          <h1 className="text-xl font-bold text-center mt-3">My Projects</h1>
+          <CategoryContainer classname="flex mt-4 mb-2 gap-2 flex-wrap justify-center">
+            {categories.map((cat) => (
+              <Button
+                key={cat}
+                onClick={() => setCategory(cat)}
+                className={`p-2 md:px-4 md:py-2 rounded ${
+                  category === cat
+                    ? "bg-black text-white"
+                    : "bg-gray-200 text-gray-700"
+                } hover:cursor-pointer`}
+              >
+                {cat}
+              </Button>
+            ))}
+          </CategoryContainer>
+
+          {filteredProjects.map((project, index) => (
+            <div
+              className="relative w-full max-w-sm mx-auto border my-3 rounded-lg"
+              key={index}
+            >
+              <div className="relative">
+                <ImageSlider
+                  images={project.images}
+                  autoPlay={false}
+                  interactive={false}
+                  compact={true}
+                />
+                {project.link && project.link !== "#" && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-2 right-2 z-10 bg-black/60 hover:bg-blue-600 
+      text-white p-2 rounded-full backdrop-blur-sm transition duration-300 shadow-md"
+                  >
+                    <FiExternalLink size={18} />
+                  </a>
+                )}
+              </div>
+              <div className="text-center md:text-justify">
+                <div className="flex gap-2 justify-center text-2xl border p-2 flex-wrap">
+                  {project.tools?.map((tool, i) => (
+                    <div
+                      key={i}
+                      className="hover:scale-110 transition cursor-pointer"
                     >
-                      <FiExternalLink size={18} />
-                    </a>
-                  )}
+                      {toolIcons[tool]}
+                    </div>
+                  ))}
                 </div>
-                <div className="text-center md:text-justify">
-                  {/* TOOL ICONS */}
-                  <div className="flex gap-2 justify-center text-2xl border p-2">
-                    {project.tools?.map((tool, i) => (
-                      <div
-                        key={i}
-                        className="hover:scale-110 transition cursor-pointer"
-                      >
-                        {toolIcons[tool]}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-semibold">{project.title}</h3>
-                    <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
-                  </div>
+                <div className="p-5">
+                  <h3 className="font-semibold">{project.title}</h3>
+                  <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

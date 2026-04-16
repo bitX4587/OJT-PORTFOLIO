@@ -51,12 +51,12 @@ function about({ expanded }: { expanded: boolean }) {
     <div className="grid grid-cols-1">
       {/* PREVIEW MODE */}
       {!expanded && (
-        <div className="md:border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
+        <div className="rounded-lg md:border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
           <div className="grid grid-cols-[140px_1fr] md:grid-cols-[200px_1fr] items-start">
             {/* IMAGE */}
             <div>
               <img
-                className="w-full h-auto"
+                className="w-full h-auto rounded-l-lg"
                 src={profile.img}
                 alt={profile.name}
               />
@@ -86,7 +86,7 @@ function about({ expanded }: { expanded: boolean }) {
           <div className="max-w-xl w-full">
             <div className="flex justify-center w-full">
               <img
-                className="m-5 w-80 rounded-lg"
+                className="m-5 w-60 md:w-80 rounded-lg"
                 src={profile.img}
                 alt={profile.name}
               />
