@@ -158,7 +158,7 @@ const projects = [
   {
     img: BarangayInfoSystem,
     title: "Barangay Information System",
-    desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency.",
+    desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency. It enhances efficiency by providing a structured and user-friendly interface for handling data and better service delivery within the barangay.",
     category: "Website",
     link: "a",
     tools: [
@@ -576,7 +576,7 @@ function Projects({ expanded }: { expanded: boolean }) {
     <div className="grid grid-cols-1 place-items-center">
       {/* PREVIEW MODE (ONLY FIRST PROJECT) */}
       {!expanded && (
-        <div className="relative max-w-xl mx-auto border hover:transition duration-300 cursor-pointer">
+        <div className="relative max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
           <h1 className="text-xl font-bold text-center m-3">My Projects</h1>
           <img
             src={projects[0].img}
@@ -620,7 +620,7 @@ function Projects({ expanded }: { expanded: boolean }) {
           <div className="grid grid-cols-1 mx-5">
             <h1 className="text-xl font-bold text-center mt-3">My Projects</h1>
             {/* CATEGORY BUTTONS */}
-            <CategoryContainer classname="flex my-4 gap-2 flex-wrap justify-center">
+            <CategoryContainer classname="flex mt-4 mb-2 gap-2 flex-wrap justify-center">
               {categories.map((cat) => (
                 <Button
                   key={cat}
@@ -636,8 +636,11 @@ function Projects({ expanded }: { expanded: boolean }) {
               ))}
             </CategoryContainer>
             {filteredProjects.map((project, index) => (
-              <div className="relative max-w-xl mx-auto border" key={index}>
-                <div className="relative max-w-xl mx-auto border" key={index}>
+              <div
+                className="relative max-w-xl mx-auto border my-3 rounded-lg"
+                key={index}
+              >
+                <div className="relative max-w-xl mx-auto" key={index}>
                   {project.link && project.link !== "#" ? (
                     <a
                       href={project.link}
@@ -645,14 +648,14 @@ function Projects({ expanded }: { expanded: boolean }) {
                       rel="noopener noreferrer"
                     >
                       <img
-                        className="w-full hover:cursor-pointer"
+                        className="w-full rounded-t-lg hover:cursor-pointer"
                         src={project.img}
                         alt={project.title}
                       />
                     </a>
                   ) : (
                     <img
-                      className="w-full"
+                      className="w-full rounded-t-lg"
                       src={project.img}
                       alt={project.title}
                     />

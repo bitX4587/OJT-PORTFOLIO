@@ -9,7 +9,7 @@ const profile = {
     location: "Philippines",
   },
   summary:
-    "A passionate web developer with over 3 years of experience in creating high-impact Websites/Web Apps, IoT & Simulations, Mobile Apps, Games, and Designs. I specialize in creating responsive, user-friendly interfaces using modern web technologies and frameworks.",
+    "Software developer with over 3 years of experience in creating high-impact Websites/Web Apps, IoT & Simulations, Mobile Apps, Games, and Designs. I specialize in creating responsive, user-friendly interfaces using modern web technologies and frameworks.",
 
   skills: [
     "HTML",
@@ -51,8 +51,8 @@ function about({ expanded }: { expanded: boolean }) {
     <div className="grid grid-cols-1">
       {/* PREVIEW MODE */}
       {!expanded && (
-        <div className="border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
-          <div className="grid grid-cols-[140px_1fr] items-start md:grid-cols-2">
+        <div className="md:border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
+          <div className="grid grid-cols-[140px_1fr] md:grid-cols-[200px_1fr] items-start">
             {/* IMAGE */}
             <div>
               <img
@@ -63,14 +63,14 @@ function about({ expanded }: { expanded: boolean }) {
             </div>
 
             {/* INFO */}
-            <div className="text-start self-center pl-3 pr-3 md:p-5">
-              <h2 className="font-bold mb-1 text-sm md:text-xl">About Me</h2>
+            <div className="text-start self-center pl-3 pr-3 md:p-3">
+              <h2 className="font-bold mb-1 text-sm md:text-lg">About Me</h2>
 
-              <h3 className="text-gray-700 mb-1 text-xs md:text-lg">
+              <h3 className="text-gray-700 mb-1 text-xs md:text-sm">
                 {profile.name}
               </h3>
 
-              <p className="text-gray-600 text-justify text-xs md:text-sm max-h-16 md:max-h-full overflow-y-auto pr-1">
+              <p className="text-gray-600 text-justify text-xs max-h-16 md:max-h-full overflow-y-auto pr-1">
                 {profile.summary}
               </p>
             </div>
@@ -85,7 +85,11 @@ function about({ expanded }: { expanded: boolean }) {
 
           <div className="max-w-xl w-full">
             <div className="flex justify-center w-full">
-              <img className="p-5 w-80" src={profile.img} alt={profile.name} />
+              <img
+                className="m-5 w-80 rounded-lg"
+                src={profile.img}
+                alt={profile.name}
+              />
             </div>
 
             <div className="border max-w-xl mx-auto p-5 text-justify">

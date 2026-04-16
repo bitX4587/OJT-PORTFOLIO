@@ -28,25 +28,39 @@ function App() {
 
       <main className="flex-grow">
         {isPreview && (
-          <div className="grid grid-cols-1 place-items-center">
-            <div className="mx-5" onClick={() => open("credentials")}>
-              <Credentials expanded={false} />
-            </div>
+          <>
+            <div className="grid grid-cols-1 m-5">
+              <div className="hidden md:block" onClick={() => open("about")}>
+                <About expanded={false} />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 md:my-5">
+                <div
+                  className="md:ml-auto md:w-[90%] border md:mx-2 md:rounded-lg"
+                  onClick={() => open("credentials")}
+                >
+                  <Credentials expanded={false} />
+                </div>
 
-            <div className="mx-5" onClick={() => open("about")}>
-              <About expanded={false} />
-            </div>
+                <div
+                  className="border my-5 md:hidden"
+                  onClick={() => open("about")}
+                >
+                  <About expanded={false} />
+                </div>
 
-            <div className="mx-5" onClick={() => open("projects")}>
-              <Projects expanded={false} />
+                <div
+                  className="md:mr-auto md:w-[90%] border md:mx-2 md:rounded-lg"
+                  onClick={() => open("projects")}
+                >
+                  <Projects expanded={false} />
+                </div>
+              </div>
+              <div className="mt-5 md:m-0" onClick={() => open("certificates")}>
+                <Certificates expanded={false} />
+              </div>
             </div>
-
-            <div className="mx-5" onClick={() => open("certificates")}>
-              <Certificates expanded={false} />
-            </div>
-
             <Contact />
-          </div>
+          </>
         )}
 
         {!isPreview && (

@@ -78,7 +78,7 @@ function certificates({ expanded }: { expanded: boolean }) {
     <>
       {!expanded && (
         <div className="grid grid-cols-1">
-          <div className="border max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
+          <div className="border md:rounded-lg max-w-xl mx-auto hover:transition duration-300 cursor-pointer">
             <h1 className="text-xl font-bold text-center m-3">
               My Certificates
             </h1>
@@ -93,15 +93,19 @@ function certificates({ expanded }: { expanded: boolean }) {
       {expanded && (
         <>
           <div className="grid grid-cols-1 mx-5">
-            <h1 className="text-xl font-bold text-center m-3">
+            <h1 className="text-xl font-bold text-center mt-3">
               My Certificates
             </h1>
             {imagesPath.map((project, index) => (
               <div
-                className="border max-w-xl mx-auto hover:transition duration-300"
+                className="border max-w-xl mx-auto hover:transition duration-300 my-3 rounded-lg"
                 key={index}
               >
-                <img src={project.img} alt={project.title} />
+                <img
+                  className="rounded-t-lg"
+                  src={project.img}
+                  alt={project.title}
+                />
                 <div className="text-center p-5 md:text-justify">
                   <h3 className="font-semibold">{project.title}</h3>
                   <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>

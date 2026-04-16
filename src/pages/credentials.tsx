@@ -42,7 +42,7 @@ function Credentials({ expanded }: { expanded: boolean }) {
   return (
     <div className="grid grid-cols-1">
       {!expanded && (
-        <div className="border hover:duration-300 cursor-pointer w-full max-w-xl mx-auto text-center">
+        <div className="hover:duration-300 cursor-pointer w-full max-w-xl mx-auto text-center">
           <h1 className="text-xl font-bold text-center m-3">My Credentials</h1>
           <div className="flex justify-center">
             <img
@@ -61,18 +61,18 @@ function Credentials({ expanded }: { expanded: boolean }) {
       {expanded && (
         <>
           <div className="grid grid-cols-1 mx-5">
-            <h1 className="text-xl font-bold text-center m-3">
+            <h1 className="text-xl font-bold text-center mt-3">
               My Credentials
             </h1>
 
             {imagesPath.map((project, index) => (
               <div
                 key={index}
-                className="border hover:w-full max-w-xl mx-auto text-center"
+                className="border hover:w-full max-w-xl mx-auto text-center my-3 rounded-lg"
               >
                 <div className="flex justify-center">
                   <img
-                    className="w-full"
+                    className="w-full rounded-t-lg"
                     src={project.img}
                     alt={project.title}
                   />
