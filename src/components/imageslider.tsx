@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectFade } from "swiper/modules";
 
@@ -20,42 +21,47 @@ function ImageSlider({
   interactive = true,
   onSlideChange,
 }: ImageSliderProps) {
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+  const [swiper, setSwiper] = useState<any>(null);
+
+  useEffect(() => {
+    if (!swiper) return;
+    if (!prevRef.current || !nextRef.current) return;
+
+    const navigation = swiper.params.navigation;
+
+    if (navigation && typeof navigation !== "boolean") {
+      navigation.prevEl = prevRef.current;
+      navigation.nextEl = nextRef.current;
+
+      swiper.navigation.destroy();
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
+
   return (
     <div
-      className={`relative w-full overflow-hidden ${
-        compact ? "rounded-t-lg" : ""
-      }`}
+      className={`relative w-full overflow-hidden ${compact ? "rounded-t-lg" : ""}`}
     >
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
-        onSlideChange={(swiper) => onSlideChange?.(swiper.realIndex)}
         loop={images.length > 1}
         autoplay={
-          autoPlay
-            ? {
-                delay: 3000,
-                disableOnInteraction: false,
-              }
-            : false
+          autoPlay ? { delay: 3000, disableOnInteraction: false } : false
         }
-        navigation={
-          interactive && showNavigation && images.length > 1
-            ? {
-                nextEl: ".custom-next",
-                prevEl: ".custom-prev",
-              }
-            : false
-        }
+        onSwiper={setSwiper}
+        onSlideChange={(s) => onSlideChange?.(s.realIndex)}
         allowTouchMove={interactive}
         className="w-full"
       >
         {images.map((img, i) => (
-          <SwiperSlide key={i} className="w-full">
+          <SwiperSlide key={i}>
             <img
               src={img}
-              alt={`slide-${i}`}
               className={`w-full object-cover block ${
                 compact ? "" : "aspect-[16/12]"
               }`}
@@ -64,31 +70,18 @@ function ImageSlider({
         ))}
       </Swiper>
 
-      {/* ================= CUSTOM NAVIGATION BUTTONS ================= */}
       {showNavigation && images.length > 1 && (
         <>
-          {/* LEFT */}
           <button
-            className="custom-prev absolute left-2 top-1/2 -translate-y-1/2
-            w-10 h-10 rounded-full
-            bg-black/50 text-white
-            flex items-center justify-center
-            backdrop-blur-sm
-            hover:bg-blue-600
-            transition shadow-md z-10 cursor-pointer"
+            ref={prevRef}
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white z-10 cursor-pointer"
           >
             ◀
           </button>
 
-          {/* RIGHT */}
           <button
-            className="custom-next absolute right-2 top-1/2 -translate-y-1/2
-            w-10 h-10 rounded-full
-            bg-black/50 text-white
-            flex items-center justify-center
-            backdrop-blur-sm
-            hover:bg-blue-600
-            transition shadow-md z-10 cursor-pointer"
+            ref={nextRef}
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white z-10 cursor-pointer"
           >
             ▶
           </button>
