@@ -140,17 +140,83 @@ import MyRecipe from "../assets/projects/Mobiles/My Recipe.jpg";
 
 // Website Projects
 import AnimeWebsite from "../assets/projects/Websites/Anime Website/desktop/cover.png";
+import AnimeWebsite1 from "../assets/projects/Websites/Anime Website/desktop/cover1.png";
+import AnimeWebsite2 from "../assets/projects/Websites/Anime Website/desktop/cover2.png";
+import AnimeWebsite3 from "../assets/projects/Websites/Anime Website/desktop/cover3.png";
+import AnimeWebsite4 from "../assets/projects/Websites/Anime Website/desktop/cover4.png";
+
 import ArtGallery from "../assets/projects/Websites/Art-Gallery/desktop/cover.png";
+import ArtGallery1 from "../assets/projects/Websites/Art-Gallery/desktop/cover1.png";
+import ArtGallery2 from "../assets/projects/Websites/Art-Gallery/desktop/cover2.png";
+
 import BarangayInfoSystem from "../assets/projects/Websites/Barangay Infosys/desktop/cover.png";
+import BarangayInfoSystem1 from "../assets/projects/Websites/Barangay Infosys/desktop/cover1.png";
+import BarangayInfoSystem2 from "../assets/projects/Websites/Barangay Infosys/desktop/cover2.png";
+import BarangayInfoSystem3 from "../assets/projects/Websites/Barangay Infosys/desktop/cover3.png";
+import BarangayInfoSystem4 from "../assets/projects/Websites/Barangay Infosys/desktop/cover4.png";
+import BarangayInfoSystem5 from "../assets/projects/Websites/Barangay Infosys/desktop/cover5.png";
+import BarangayInfoSystem6 from "../assets/projects/Websites/Barangay Infosys/desktop/cover6.png";
+import BarangayInfoSystem7 from "../assets/projects/Websites/Barangay Infosys/desktop/cover7.png";
+import BarangayInfoSystem8 from "../assets/projects/Websites/Barangay Infosys/desktop/cover8.png";
+import BarangayInfoSystem9 from "../assets/projects/Websites/Barangay Infosys/desktop/cover9.png";
+import BarangayInfoSystem10 from "../assets/projects/Websites/Barangay Infosys/desktop/cover10.png";
+import BarangayInfoSystem11 from "../assets/projects/Websites/Barangay Infosys/desktop/cover11.png";
+import BarangayInfoSystem12 from "../assets/projects/Websites/Barangay Infosys/desktop/cover12.png";
+
 import FreshNest from "../assets/projects/Websites/E-Grocery/desktop/cover.png";
+import FreshNest1 from "../assets/projects/Websites/E-Grocery/desktop/cover1.png";
+import FreshNest2 from "../assets/projects/Websites/E-Grocery/desktop/cover2.png";
+
 import EHomes5BookingSystem from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover.png";
+import EHomes5BookingSystem1 from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover1.png";
+import EHomes5BookingSystem2 from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover2.png";
+import EHomes5BookingSystem3 from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover3.png";
+import EHomes5BookingSystem4 from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover4.png";
+import EHomes5BookingSystem5 from "../assets/projects/Websites/E-Homes-5-Apartment/desktop/cover5.png";
+
 import GraduatesEbook from "../assets/projects/Websites/Graduates E-book/desktop/cover.png";
+import GraduatesEbook1 from "../assets/projects/Websites/Graduates E-book/desktop/cover1.png";
+import GraduatesEbook2 from "../assets/projects/Websites/Graduates E-book/desktop/cover2.png";
+import GraduatesEbook3 from "../assets/projects/Websites/Graduates E-book/desktop/cover3.png";
+import GraduatesEbook4 from "../assets/projects/Websites/Graduates E-book/desktop/cover4.png";
+
 import InformationHub from "../assets/projects/Websites/Information Hub/desktop/cover.png";
+import InformationHub1 from "../assets/projects/Websites/Information Hub/desktop/cover1.png";
+import InformationHub2 from "../assets/projects/Websites/Information Hub/desktop/cover2.png";
+import InformationHub3 from "../assets/projects/Websites/Information Hub/desktop/cover3.png";
+import InformationHub4 from "../assets/projects/Websites/Information Hub/desktop/cover4.png";
+
 import FirstPortfolio from "../assets/projects/Websites/Mark's First Portfolio Website/desktop/cover.png";
 import FreelancePortfolio from "../assets/projects/Websites/Mark's Freelance Website/cover.png";
+
 import NailsBeautyAndBeyond from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover.png";
+import NailsBeautyAndBeyond1 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover1.png";
+import NailsBeautyAndBeyond2 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover2.png";
+import NailsBeautyAndBeyond3 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover3.png";
+import NailsBeautyAndBeyond4 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover4.png";
+import NailsBeautyAndBeyond5 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover5.png";
+import NailsBeautyAndBeyond6 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover6.png";
+import NailsBeautyAndBeyond7 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover7.png";
+import NailsBeautyAndBeyond8 from "../assets/projects/Websites/Nails, Beauty and Beyond/desktop/cover8.png";
+
 import OrgMerchWebsite from "../assets/projects/Websites/OrgMerch Website/desktop/cover.png";
+import OrgMerchWebsite1 from "../assets/projects/Websites/OrgMerch Website/desktop/cover1.png";
+import OrgMerchWebsite2 from "../assets/projects/Websites/OrgMerch Website/desktop/cover2.png";
+import OrgMerchWebsite3 from "../assets/projects/Websites/OrgMerch Website/desktop/cover3.png";
+import OrgMerchWebsite4 from "../assets/projects/Websites/OrgMerch Website/desktop/cover4.png";
+import OrgMerchWebsite5 from "../assets/projects/Websites/OrgMerch Website/desktop/cover5.png";
+import OrgMerchWebsite6 from "../assets/projects/Websites/OrgMerch Website/desktop/cover6.png";
+import OrgMerchWebsite7 from "../assets/projects/Websites/OrgMerch Website/desktop/cover7.png";
+import OrgMerchWebsite8 from "../assets/projects/Websites/OrgMerch Website/desktop/cover8.png";
+import OrgMerchWebsite9 from "../assets/projects/Websites/OrgMerch Website/desktop/cover9.png";
+import OrgMerchWebsite10 from "../assets/projects/Websites/OrgMerch Website/desktop/cover10.png";
+import OrgMerchWebsite11 from "../assets/projects/Websites/OrgMerch Website/desktop/cover11.png";
+import OrgMerchWebsite12 from "../assets/projects/Websites/OrgMerch Website/desktop/cover12.png";
+import OrgMerchWebsite13 from "../assets/projects/Websites/OrgMerch Website/desktop/cover13.png";
+import OrgMerchWebsite14 from "../assets/projects/Websites/OrgMerch Website/desktop/cover14.png";
+
 import SmartWeather from "../assets/projects/Websites/Smart Weather/desktop/cover.png";
+import SmartWeather1 from "../assets/projects/Websites/Smart Weather/desktop/cover1.png";
 
 // Reusable Components
 import CategoryContainer from "../components/categorycont";
@@ -158,9 +224,23 @@ import Button from "../components/button";
 
 const projects = [
   {
-    images: [BarangayInfoSystem],
+    images: [
+      BarangayInfoSystem,
+      BarangayInfoSystem1,
+      BarangayInfoSystem2,
+      BarangayInfoSystem3,
+      BarangayInfoSystem4,
+      BarangayInfoSystem5,
+      BarangayInfoSystem6,
+      BarangayInfoSystem7,
+      BarangayInfoSystem8,
+      BarangayInfoSystem9,
+      BarangayInfoSystem10,
+      BarangayInfoSystem11,
+      BarangayInfoSystem12,
+    ],
     title: "Barangay Information System",
-    desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency. It enhances efficiency by providing a structured and user-friendly interface for handling data and better service delivery within the barangay.",
+    desc: "A web-based information management system designed to organize and manage barangay records, improving accessibility and data handling efficiency.",
     category: "Website",
     link: "a",
     tools: [
@@ -182,7 +262,13 @@ const projects = [
     tools: ["React", "Framer", "Vite", "Tailwind", "Gmail"],
   },
   {
-    images: [GraduatesEbook],
+    images: [
+      GraduatesEbook,
+      GraduatesEbook1,
+      GraduatesEbook2,
+      GraduatesEbook3,
+      GraduatesEbook4,
+    ],
     title: "Graduates E-Book",
     desc: "A digital publication system designed to present graduate profiles and achievements in an organized e-book format.",
     category: "Website",
@@ -206,7 +292,13 @@ const projects = [
     tools: ["HTML", "CSS", "JavaScript", "GitHub"],
   },
   {
-    images: [AnimeWebsite],
+    images: [
+      AnimeWebsite,
+      AnimeWebsite1,
+      AnimeWebsite2,
+      AnimeWebsite3,
+      AnimeWebsite4,
+    ],
     title: "Anime Page",
     desc: "A themed website displaying anime collections with interactive UI components and responsive design.",
     category: "Website",
@@ -214,7 +306,7 @@ const projects = [
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
-    images: [ArtGallery],
+    images: [ArtGallery, ArtGallery1, ArtGallery2],
     title: "Digital Art Gallery",
     desc: "A responsive gallery platform for showcasing digital artworks with clean UI presentation and categorization.",
     category: "Website",
@@ -222,7 +314,7 @@ const projects = [
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
   },
   {
-    images: [FreshNest],
+    images: [FreshNest, FreshNest1, FreshNest2],
     title: "FreshNest E-Commerce",
     desc: "A modern e-commerce frontend design focused on clean product presentation and user-friendly navigation.",
     category: "Website",
@@ -230,7 +322,14 @@ const projects = [
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
-    images: [EHomes5BookingSystem],
+    images: [
+      EHomes5BookingSystem,
+      EHomes5BookingSystem1,
+      EHomes5BookingSystem2,
+      EHomes5BookingSystem3,
+      EHomes5BookingSystem4,
+      EHomes5BookingSystem5,
+    ],
     title: "E-Homes 5 Apartment",
     desc: "A rental management system for apartment bookings, tenant tracking, and unit availability management.",
     category: "Website",
@@ -246,7 +345,13 @@ const projects = [
     ],
   },
   {
-    images: [InformationHub],
+    images: [
+      InformationHub,
+      InformationHub1,
+      InformationHub2,
+      InformationHub3,
+      InformationHub4,
+    ],
     title: "Information Hub Portal",
     desc: "A centralized information system for organizing and accessing structured data efficiently.",
     category: "Website",
@@ -254,7 +359,17 @@ const projects = [
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
   },
   {
-    images: [NailsBeautyAndBeyond],
+    images: [
+      NailsBeautyAndBeyond,
+      NailsBeautyAndBeyond1,
+      NailsBeautyAndBeyond2,
+      NailsBeautyAndBeyond3,
+      NailsBeautyAndBeyond4,
+      NailsBeautyAndBeyond5,
+      NailsBeautyAndBeyond6,
+      NailsBeautyAndBeyond7,
+      NailsBeautyAndBeyond8,
+    ],
     title: "Nails Beauty & Beyond",
     desc: "A service booking system for salon appointments with scheduling and service management features.",
     category: "Website",
@@ -270,7 +385,23 @@ const projects = [
     ],
   },
   {
-    images: [OrgMerchWebsite],
+    images: [
+      OrgMerchWebsite,
+      OrgMerchWebsite1,
+      OrgMerchWebsite2,
+      OrgMerchWebsite3,
+      OrgMerchWebsite4,
+      OrgMerchWebsite5,
+      OrgMerchWebsite6,
+      OrgMerchWebsite7,
+      OrgMerchWebsite8,
+      OrgMerchWebsite9,
+      OrgMerchWebsite10,
+      OrgMerchWebsite11,
+      OrgMerchWebsite12,
+      OrgMerchWebsite13,
+      OrgMerchWebsite14,
+    ],
     title: "OrgMerch Store",
     desc: "An online store interface for showcasing and managing organizational merchandise products.",
     category: "Website",
@@ -286,7 +417,7 @@ const projects = [
     ],
   },
   {
-    images: [SmartWeather],
+    images: [SmartWeather, SmartWeather1],
     title: "Smart Weather",
     desc: "A weather information web app displaying real-time weather updates and forecasts.",
     category: "Website",
@@ -584,9 +715,8 @@ function Projects({ expanded }: { expanded: boolean }) {
           {/* 👈 max-w-sm */}
           <h1 className="text-xl font-bold text-center m-3">My Projects</h1>
           <ImageSlider
-            images={projects.map((p) => p.images[0])} // 👈 one cover per project
+            images={projects.map((p) => p.images[0])}
             autoPlay={true}
-            showNavigation={false}
             interactive={false}
             onSlideChange={setActiveIndex}
           />
@@ -637,14 +767,15 @@ function Projects({ expanded }: { expanded: boolean }) {
 
           {filteredProjects.map((project, index) => (
             <div
-              className="relative w-full max-w-sm mx-auto border my-3 rounded-lg"
+              className="relative w-full max-w-lg mx-auto border my-3 rounded-lg"
               key={index}
             >
               <div className="relative">
                 <ImageSlider
                   images={project.images}
-                  autoPlay={false}
-                  interactive={false}
+                  autoPlay={true}
+                  interactive={true}
+                  showNavigation={true}
                   compact={true}
                 />
                 {project.link && project.link !== "#" && (
