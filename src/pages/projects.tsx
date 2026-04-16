@@ -625,7 +625,7 @@ function Projects({ expanded }: { expanded: boolean }) {
                 <Button
                   key={cat}
                   onClick={() => setCategory(cat)}
-                  className={`px-4 py-2 rounded ${
+                  className={`p-2 md:px-4 md:py-2 rounded ${
                     category === cat
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-700"
@@ -636,10 +636,7 @@ function Projects({ expanded }: { expanded: boolean }) {
               ))}
             </CategoryContainer>
             {filteredProjects.map((project, index) => (
-              <div
-                className="relative max-w-xl mx-auto border my-5"
-                key={index}
-              >
+              <div className="relative max-w-xl mx-auto border" key={index}>
                 <div className="relative max-w-xl mx-auto border" key={index}>
                   {project.link && project.link !== "#" ? (
                     <a

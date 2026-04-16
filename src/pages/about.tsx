@@ -52,25 +52,27 @@ function about({ expanded }: { expanded: boolean }) {
       {/* PREVIEW MODE */}
       {!expanded && (
         <div className="border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-start">
-            <h2 className="text-xl font-bold text-center m-3 md:hidden">
-              About Me
-            </h2>
+          <div className="grid grid-cols-[140px_1fr] items-start md:grid-cols-2">
+            {/* IMAGE */}
+            <div>
+              <img
+                className="w-full h-auto"
+                src={profile.img}
+                alt={profile.name}
+              />
+            </div>
 
-            <img
-              className="w-full md:w-60 h-auto md:h-60 object-cover"
-              src={profile.img}
-              alt={profile.name}
-            />
+            {/* INFO */}
+            <div className="text-start self-center pl-3 pr-3 md:p-5">
+              <h2 className="font-bold mb-1 text-sm md:text-xl">About Me</h2>
 
-            <div className="text-center p-4 md:text-justify">
-              <h2 className="hidden md:block text-xl font-bold">About Me</h2>
-
-              <h3 className="mt-1 font-semibold text-gray-700">
+              <h3 className="text-gray-700 mb-1 text-xs md:text-lg">
                 {profile.name}
               </h3>
 
-              <p className="mt-2 text-gray-600 text-sm">{profile.summary}</p>
+              <p className="text-gray-600 text-justify text-xs md:text-sm max-h-16 md:max-h-full overflow-y-auto pr-1">
+                {profile.summary}
+              </p>
             </div>
           </div>
         </div>
