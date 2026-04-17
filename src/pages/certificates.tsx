@@ -87,7 +87,7 @@ function certificates({ expanded }: { expanded: boolean }) {
     <>
       {!expanded && (
         <div className="grid grid-cols-1">
-          <div className="border rounded-lg cursor-pointer w-full max-w-xl mx-auto text-center">
+          <div className="bg-gray-900 border rounded-4xl cursor-pointer w-full max-w-xl mx-auto text-center">
             <h1 className="text-xl font-bold text-center m-3">
               My Certificates
             </h1>
@@ -112,7 +112,7 @@ function certificates({ expanded }: { expanded: boolean }) {
             </h1>
             {imagesPath.map((project, index) => (
               <div
-                className="border max-w-lg mx-auto hover:transition duration-300 my-3 rounded-lg"
+                className="bg-gray-900 border max-w-lg mx-auto hover:transition duration-300 my-3 rounded-4xl"
                 key={index}
               >
                 <ImageSlider

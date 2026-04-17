@@ -43,10 +43,13 @@ function ImageSlider({
 
   return (
     <div
-      className={`relative w-full overflow-hidden ${compact ? "rounded-t-lg" : ""}`}
+      className={`relative w-full overflow-hidden ${compact ? "rounded-t-4xl" : ""}`}
     >
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={1000}
         spaceBetween={0}
         slidesPerView={1}
         loop={images.length > 1}

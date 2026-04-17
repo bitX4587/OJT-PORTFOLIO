@@ -86,7 +86,7 @@ function Credentials({ expanded }: { expanded: boolean }) {
             // ✅ After — smaller card, constrained width
             <div
               key={index}
-              className="border w-full max-w-lg mx-auto text-center my-3 rounded-lg shadow-sm"
+              className="bg-gray-900 border w-full max-w-lg mx-auto text-center my-3 rounded-4xl shadow-sm"
             >
               <ImageSlider
                 images={project.images}

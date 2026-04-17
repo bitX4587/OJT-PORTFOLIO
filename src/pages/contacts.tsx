@@ -75,7 +75,7 @@ function Contacts() {
           </a>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-5 space-y-3">
+        <div className="bg-white rounded-lg shadow-md p-3 space-y-3">
           <div className="flex items-center gap-2">
             <MdEmail size={24} />
             <span>partozamark2005@gmail.com</span>

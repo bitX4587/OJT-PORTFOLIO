@@ -749,7 +749,7 @@ function Projects({ expanded }: { expanded: boolean }) {
       {expanded && (
         <div className="grid grid-cols-1 mx-5">
           <h1 className="text-xl font-bold text-center mt-3">My Projects</h1>
-          <CategoryContainer classname="flex mt-4 mb-2 gap-2 flex-wrap justify-center">
+          <CategoryContainer classname="flex mt-4 mb-2 md:mb-4 gap-2 flex-wrap justify-center">
             {categories.map((cat) => (
               <Button
                 key={cat}
@@ -764,50 +764,51 @@ function Projects({ expanded }: { expanded: boolean }) {
               </Button>
             ))}
           </CategoryContainer>
-
-          {filteredProjects.map((project, index) => (
-            <div
-              className="relative w-full max-w-lg mx-auto border my-3 rounded-lg"
-              key={index}
-            >
-              <div className="relative">
-                <ImageSlider
-                  images={project.images}
-                  autoPlay={true}
-                  interactive={true}
-                  showNavigation={true}
-                  compact={true}
-                />
-                {project.link && project.link !== "#" && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-2 right-2 z-10 bg-black/60 hover:bg-blue-600 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            {filteredProjects.map((project, index) => (
+              <div
+                className="bg-gray-900 relative w-full max-w-lg mx-auto border my-2 md:my-0 rounded-4xl"
+                key={index}
+              >
+                <div className="relative">
+                  <ImageSlider
+                    images={project.images}
+                    autoPlay={true}
+                    interactive={true}
+                    showNavigation={true}
+                    compact={true}
+                  />
+                  {project.link && project.link !== "#" && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 z-10 bg-black/60 hover:bg-blue-600 
       text-white p-2 rounded-full backdrop-blur-sm transition duration-300 shadow-md"
-                  >
-                    <FiExternalLink size={18} />
-                  </a>
-                )}
-              </div>
-              <div className="text-center md:text-justify">
-                <div className="flex gap-2 justify-center text-2xl border p-2 flex-wrap">
-                  {project.tools?.map((tool, i) => (
-                    <div
-                      key={i}
-                      className="hover:scale-110 transition cursor-pointer"
                     >
-                      {toolIcons[tool]}
-                    </div>
-                  ))}
+                      <FiExternalLink size={18} />
+                    </a>
+                  )}
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold">{project.title}</h3>
-                  <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
+                <div className="text-center md:text-justify">
+                  <div className="flex gap-2 justify-center text-2xl border p-2 flex-wrap">
+                    {project.tools?.map((tool, i) => (
+                      <div
+                        key={i}
+                        className="hover:scale-110 transition cursor-pointer"
+                      >
+                        {toolIcons[tool]}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-semibold">{project.title}</h3>
+                    <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </div>

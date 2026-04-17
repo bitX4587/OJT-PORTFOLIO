@@ -51,12 +51,12 @@ function about({ expanded }: { expanded: boolean }) {
     <div className="grid grid-cols-1">
       {/* PREVIEW MODE */}
       {!expanded && (
-        <div className="rounded-lg md:border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
+        <div className="bg-gray-900 rounded-4xl md:border hover:transition duration-300 cursor-pointer w-full max-w-xl mx-auto">
           <div className="grid grid-cols-[140px_1fr] md:grid-cols-[200px_1fr] items-start">
             {/* IMAGE */}
             <div>
               <img
-                className="w-full h-auto rounded-l-lg"
+                className="w-full h-auto rounded-l-4xl"
                 src={profile.img}
                 alt={profile.name}
               />
@@ -86,13 +86,13 @@ function about({ expanded }: { expanded: boolean }) {
           <div className="max-w-xl w-full">
             <div className="flex justify-center w-full">
               <img
-                className="m-5 w-60 md:w-80 rounded-lg"
+                className="m-5 w-60 md:w-80 rounded-4xl"
                 src={profile.img}
                 alt={profile.name}
               />
             </div>
 
-            <div className="border max-w-xl mx-auto p-5 text-justify">
+            <div className="bg-gray-900 border rounded-4xl max-w-xl mx-auto p-5 text-justify">
               <h3 className="text-center font-semibold text-gray-700">
                 {profile.name}
               </h3>

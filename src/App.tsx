@@ -10,6 +10,8 @@ import Projects from "./pages/projects";
 import Certificates from "./pages/certificates";
 import Contact from "./pages/contacts";
 
+import bg from "/bg1.jpg";
+
 function App() {
   const [active, setActive] = useState<string | null>(null);
 
@@ -23,33 +25,36 @@ function App() {
   const close = () => setActive(null);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div
+      className="min-h-screen flex flex-col bg-contain bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <Header showBack={!isPreview} onBack={close} />
 
-      <main className="flex-grow">
+      <main className="flex-grow m-3 border border-white/20 rounded-lg bg-white/10 backdrop-blur-xl shadow-xl md:max-w-xl md:mx-auto lg:max-w-4xl lg:mx-auto">
         {isPreview && (
           <>
             <div className="grid grid-cols-1 m-5">
-              <div className="hidden md:block" onClick={() => open("about")}>
+              <div className="hidden md:block " onClick={() => open("about")}>
                 <About expanded={false} />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 md:my-5">
                 <div
-                  className="md:ml-auto md:w-[90%] border md:mx-2 rounded-lg"
+                  className="md:ml-auto md:w-[90%] bg-gray-900 border md:mx-3 rounded-4xl"
                   onClick={() => open("credentials")}
                 >
                   <Credentials expanded={false} />
                 </div>
 
                 <div
-                  className="border my-5 md:hidden rounded-lg"
+                  className="border my-5 md:hidden rounded-4xl"
                   onClick={() => open("about")}
                 >
                   <About expanded={false} />
                 </div>
 
                 <div
-                  className="md:mr-auto md:w-[90%] border md:mx-2 rounded-lg"
+                  className="md:mr-auto md:w-[90%] border bg-gray-900  md:mx-3 rounded-4xl"
                   onClick={() => open("projects")}
                 >
                   <Projects expanded={false} />
