@@ -6,21 +6,57 @@ import "swiper/swiper-bundle.css";
 
 type ImageSliderProps = {
   images: string[];
+  variant?: "credentials" | "projects" | "certificates";
+  mode?: "preview" | "focus";
   autoPlay?: boolean;
   showNavigation?: boolean;
-  compact?: boolean;
   interactive?: boolean;
   onSlideChange?: (index: number) => void;
 };
 
+const sliderVariants = {
+  credentials: {
+    preview: {
+      container: "rounded-b-4xl",
+      image: "object-cover aspect-[12/9] ",
+    },
+    focus: {
+      container: "rounded-t-4xl",
+      image: "object-contain",
+    },
+  },
+  projects: {
+    preview: {
+      container: "",
+      image: "aspect-[16/9] object-cover",
+    },
+    focus: {
+      container: "",
+      image: "rounded-t-4xl object-contain",
+    },
+  },
+  certificates: {
+    preview: {
+      container: "",
+      image: "aspect-[3/2] object-cover ",
+    },
+    focus: {
+      container: "",
+      image: "rounded-t-4xl object-contain ",
+    },
+  },
+};
+
 function ImageSlider({
   images,
+  variant = "projects",
+  mode = "preview",
   autoPlay = false,
   showNavigation = false,
-  compact = false,
   interactive = true,
   onSlideChange,
 }: ImageSliderProps) {
+  const styles = sliderVariants[variant][mode];
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const [swiper, setSwiper] = useState<any>(null);
@@ -42,9 +78,7 @@ function ImageSlider({
   }, [swiper]);
 
   return (
-    <div
-      className={`relative w-full overflow-hidden ${compact ? "rounded-t-4xl" : ""}`}
-    >
+    <div className={`relative w-full overflow-hidden ${styles.container}`}>
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         effect="fade"
@@ -63,12 +97,7 @@ function ImageSlider({
       >
         {images.map((img, i) => (
           <SwiperSlide key={i}>
-            <img
-              src={img}
-              className={`w-full object-cover block ${
-                compact ? "" : "aspect-[16/12]"
-              }`}
-            />
+            <img src={img} className={`w-full block ${styles.image}`} />
           </SwiperSlide>
         ))}
       </Swiper>

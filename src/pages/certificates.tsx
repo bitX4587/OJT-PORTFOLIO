@@ -5,7 +5,7 @@ import ImageSlider from "../components/imageslider";
 import ICpEP7thPythonProgrammingCompCert from "../assets/certificates/7TH ICPEP PYTHON PROGRAMMING.jpg";
 import AWSAIPractitionerChallengeCert from "../assets/certificates/AWS AI PRACTITIONER CHALLENGE.png";
 import CLAProgrammingEssentialsCert from "../assets/certificates/CLA PROGRAMMING ESSENTIALS.png";
-import PCAPProgrammingEssentialsCert from "../assets/certificates/PCAP PROGRAMMING ESSENTIALS.png.png";
+import PCAPProgrammingEssentialsCert from "../assets/certificates/PCAP PROGRAMMING ESSENTIALS.png";
 import CPEChallengeBreadboardingCompCert from "../assets/certificates/CPE CHALLENGE BREADBOARDING.jpg";
 import CPEChallengeParticipationCert from "../assets/certificates/CPE CHALLENGE PARTICIPATION.jpg";
 import CPEFESTDAY1Cert from "../assets/certificates/CPE FEST 1ST DAY.jpg";
@@ -87,17 +87,19 @@ function certificates({ expanded }: { expanded: boolean }) {
     <>
       {!expanded && (
         <div className="grid grid-cols-1">
-          <div className="bg-gray-900 border rounded-4xl cursor-pointer w-full max-w-xl mx-auto text-center">
+          <div className="bg-gray-900 shadow-[0_8px_30px_rgba(0,0,0,0.3)] rounded-4xl cursor-pointer w-full max-w-xl mx-auto text-center">
             <h1 className="text-xl font-bold text-center m-3">
               My Certificates
             </h1>
             <ImageSlider
+              variant="certificates"
+              mode="preview"
               images={imagesPath.map((p) => p.images[0])}
               autoPlay={true}
               interactive={false}
               onSlideChange={setActiveIndex}
             />
-            <div className="text-center p-5 md:text-justify">
+            <div className="p-5 text-justify">
               <h3 className="font-semibold">{activeItem.title}</h3>
               <p className="mt-1 text-gray-600 text-sm">{activeItem.desc}</p>
             </div>
@@ -106,23 +108,24 @@ function certificates({ expanded }: { expanded: boolean }) {
       )}
       {expanded && (
         <>
-          <div className="grid grid-cols-1 mx-5">
+          <div className="grid grid-cols-1 mx-5 mb-3">
             <h1 className="text-xl font-bold text-center mt-3">
               My Certificates
             </h1>
             {imagesPath.map((project, index) => (
               <div
-                className="bg-gray-900 border max-w-lg mx-auto hover:transition duration-300 my-3 rounded-4xl"
+                className="bg-gray-900 shadow-[0_8px_30px_rgba(0,0,0,0.3)] max-w-lg hover:transition duration-300 my-3 rounded-4xl"
                 key={index}
               >
                 <ImageSlider
                   images={project.images}
+                  variant="certificates"
+                  mode="focus"
                   autoPlay={true}
                   interactive={true}
                   showNavigation={true}
-                  compact={true}
                 />
-                <div className="text-center p-5 md:text-justify">
+                <div className="p-5 text-justify">
                   <h3 className="font-semibold">{project.title}</h3>
                   <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
                 </div>
