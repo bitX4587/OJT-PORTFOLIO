@@ -798,7 +798,7 @@ function Projects({ expanded }: { expanded: boolean }) {
                   )}
                 </div>
                 <div className="text-left">
-                  <div className="flex gap-2 justify-center text-2xl border-b-1 border-t-1 p-3 flex-wrap">
+                  <div className="flex gap-2 justify-center text-2xl border-b-1 p-3 flex-wrap">
                     {project.tools?.map((tool, i) => (
                       <div
                         key={i}
