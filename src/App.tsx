@@ -24,7 +24,7 @@ function App() {
   const cardClass =
     "rounded-[2rem] bg-gray-900 shadow-[0_8px_30px_rgba(0,0,0,0.3)]";
   return (
-    <div className="min-h-screen flex flex-col bg-contain bg-center">
+    <div className="flex flex-col bg-contain bg-center">
       <Header showBack={!isPreview} onBack={close} />
 
       <main

@@ -99,9 +99,11 @@ function certificates({ expanded }: { expanded: boolean }) {
               interactive={false}
               onSlideChange={setActiveIndex}
             />
-            <div className="p-5 text-justify">
+            <div className="p-5 text-left">
               <h3 className="font-semibold">{activeItem.title}</h3>
-              <p className="mt-1 text-gray-600 text-sm">{activeItem.desc}</p>
+              <p className="mt-1 text-gray-600 text-sm leading-snug">
+                {activeItem.desc}
+              </p>
             </div>
           </div>
         </div>
@@ -125,9 +127,11 @@ function certificates({ expanded }: { expanded: boolean }) {
                   interactive={true}
                   showNavigation={true}
                 />
-                <div className="p-5 text-justify">
+                <div className="p-5 text-left">
                   <h3 className="font-semibold">{project.title}</h3>
-                  <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
+                  <p className="mt-1 text-gray-600 text-sm leading-snug">
+                    {project.desc}
+                  </p>
                 </div>
               </div>
             ))}

@@ -239,7 +239,7 @@ const projects = [
       BarangayInfoSystem12,
     ],
     title: "Barangay Information System",
-    desc: "A web system for managing barangay records and improving data accessibility and organization.",
+    desc: "A web-based system for managing barangay records, improving data organization, and streamlining information access.",
     category: "Website",
     link: "a",
     tools: [
@@ -254,8 +254,8 @@ const projects = [
   },
   {
     images: [FreelancePortfolio],
-    title: "Codex Intel - Freelance Portfolio Website",
-    desc: "A modern responsive portfolio showcasing projects, skills, and credentials.",
+    title: "Codex Intel - Freelance Portfolio",
+    desc: "A modern responsive portfolio showcasing projects, technical skills, and professional credentials.",
     category: "Website",
     link: "https://mark-daniel-partoza-portfolio-v-1.vercel.app/",
     tools: ["React", "Framer", "Vite", "Tailwind", "Gmail"],
@@ -269,7 +269,7 @@ const projects = [
       GraduatesEbook4,
     ],
     title: "Graduates E-Book",
-    desc: "A digital system presenting graduate profiles and achievements in e-book format.",
+    desc: "A digital platform presenting graduate profiles, achievements, and academic records in an organized e-book format.",
     category: "Website",
     link: "https://graduates-ebook-management.vercel.app/",
     tools: [
@@ -285,7 +285,7 @@ const projects = [
   {
     images: [FirstPortfolio],
     title: "BitX4587 - First Website Portfolio",
-    desc: "An early portfolio project showcasing basic web development skills and layout design.",
+    desc: "An early portfolio project demonstrating foundational skills in web development and layout design.",
     category: "Website",
     link: "https://bitx4587.github.io/PORTFOLIO-1/",
     tools: ["HTML", "CSS", "JavaScript", "GitHub"],
@@ -299,7 +299,7 @@ const projects = [
       AnimeWebsite4,
     ],
     title: "Anime Page",
-    desc: "A responsive anime-themed website with interactive UI components.",
+    desc: "A responsive anime-themed website featuring interactive UI components and dynamic layout design.",
     category: "Website",
     link: "https://bitx4587.github.io/ANIME-WEBSITE/",
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
@@ -307,7 +307,7 @@ const projects = [
   {
     images: [ArtGallery, ArtGallery1, ArtGallery2],
     title: "Digital Art Gallery",
-    desc: "A clean gallery platform for showcasing and organizing digital artworks.",
+    desc: "A digital platform for showcasing, organizing, and browsing curated digital artworks.",
     category: "Website",
     link: "https://art-gallery-system.is-great.org/Art_Collection_System/src/index.php",
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
@@ -315,7 +315,7 @@ const projects = [
   {
     images: [FreshNest, FreshNest1, FreshNest2],
     title: "FreshNest E-Commerce",
-    desc: "A modern e-commerce UI focused on product display and smooth navigation.",
+    desc: "A modern e-commerce interface designed for product browsing, display, and seamless user navigation.",
     category: "Website",
     link: "https://bitx4587.github.io/E-Grocery",
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
@@ -330,7 +330,7 @@ const projects = [
       EHomes5BookingSystem5,
     ],
     title: "E-Homes 5 Apartment",
-    desc: "A rental system for managing bookings, tenants, and unit availability.",
+    desc: "A rental management system for handling bookings, tenant records, and unit availability efficiently.",
     category: "Website",
     link: "https://e-homes-5-apartment.great-site.net/src/index.php?i=1",
     tools: [
@@ -352,7 +352,7 @@ const projects = [
       InformationHub4,
     ],
     title: "Information Hub Portal",
-    desc: "A centralized system for organizing and accessing structured information.",
+    desc: "A centralized system for organizing, managing, and accessing structured information efficiently.",
     category: "Website",
     link: "https://information-hub-system.great-site.net/",
     tools: ["HTML", "Bootstrap", "JavaScript", "PHP", "MySQL", "InfinityFree"],
@@ -370,7 +370,7 @@ const projects = [
       NailsBeautyAndBeyond8,
     ],
     title: "Nails Beauty & Beyond",
-    desc: "A salon booking system with scheduling and service management features.",
+    desc: "A salon booking system with scheduling features and streamlined service management functionality.",
     category: "Website",
     link: "https://hair-nails-and-beyond.is-best.net/beyond/src/index.php",
     tools: [
@@ -401,7 +401,7 @@ const projects = [
       OrgMerchWebsite14,
     ],
     title: "OrgMerch Store",
-    desc: "An online store for managing and showcasing organizational merchandise.",
+    desc: "An e-commerce system for managing, showcasing, and selling organizational merchandise online.",
     category: "Website",
     link: "https://org-merch.great-site.net/src/index.php",
     tools: [
@@ -417,7 +417,7 @@ const projects = [
   {
     images: [SmartWeather, SmartWeather1],
     title: "Smart Weather",
-    desc: "A weather app showing real-time weather updates and forecasts.",
+    desc: "A weather application providing real-time updates and forecasts with a clean and responsive interface.",
     category: "Website",
     link: "https://bitx4587.github.io/Weather-App/",
     tools: ["HTML", "Tailwind", "JavaScript", "GitHub"],
@@ -426,7 +426,7 @@ const projects = [
   {
     images: [IAMC],
     title: "Shopping Game - CLI",
-    desc: "A terminal-based shopping game with interactive item management.",
+    desc: "A terminal-based shopping simulation game with interactive item selection and inventory logic.",
     category: "CLI",
     link: "#",
     tools: ["Cpp", "CLI", "Default"],
@@ -434,7 +434,7 @@ const projects = [
   {
     images: [JavaLAb1],
     title: "Java Lab 1 – Introduction to Java",
-    desc: "Basic Java exercises on syntax, variables, and I/O.",
+    desc: "Fundamental Java exercises covering syntax, variables, and basic input/output operations.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -442,7 +442,7 @@ const projects = [
   {
     images: [JavaLAb2],
     title: "Java Lab 2 – Control Structures",
-    desc: "Exercises on conditionals and loops in Java.",
+    desc: "Exercises implementing conditional statements and looping structures in Java.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -450,7 +450,7 @@ const projects = [
   {
     images: [JavaLAb3],
     title: "Java Lab 3 – Arrays and Strings",
-    desc: "Practice on arrays and string manipulation.",
+    desc: "Hands-on exercises focusing on array manipulation and string processing techniques.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -458,7 +458,7 @@ const projects = [
   {
     images: [JavaLAb4],
     title: "Java Lab 4 – Methods and Functions",
-    desc: "Implementation of reusable methods and functions.",
+    desc: "Implementation of reusable methods to improve modular and structured programming.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -466,7 +466,7 @@ const projects = [
   {
     images: [JavaLAb5],
     title: "Java Lab 5 – OOP Basics",
-    desc: "Introduction to classes and objects.",
+    desc: "Introduction to object-oriented programming concepts including classes and objects.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -474,7 +474,7 @@ const projects = [
   {
     images: [JavaLAb6],
     title: "Java Lab 6 – Inheritance",
-    desc: "Practice on inheritance and code reuse.",
+    desc: "Implementation of inheritance to demonstrate code reuse and hierarchical relationships.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -482,7 +482,7 @@ const projects = [
   {
     images: [JavaLAb7],
     title: "Java Lab 7 – Polymorphism",
-    desc: "Exercises on method overriding and polymorphism.",
+    desc: "Exercises demonstrating method overriding and runtime polymorphism concepts.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -490,7 +490,7 @@ const projects = [
   {
     images: [JavaLAb8],
     title: "Java Lab 8 – Exception Handling",
-    desc: "Handling errors using try-catch mechanisms.",
+    desc: "Error handling techniques using try-catch blocks and exception management.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -498,7 +498,7 @@ const projects = [
   {
     images: [JavaLAb9],
     title: "Java Lab 9 – Email GUI System",
-    desc: "A Java GUI email system with compose and inbox features.",
+    desc: "A Java GUI application simulating email composition and inbox functionality.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
@@ -506,15 +506,16 @@ const projects = [
   {
     images: [JavaLAb10],
     title: "Java Lab 10 – Final Project",
-    desc: "Final Java exercise combining all learned concepts.",
+    desc: "Final Java project integrating all core programming concepts into a single system.",
     category: "CLI",
     link: "#",
     tools: ["Java", "Eclipse", "CLI", "Default"],
   },
+
   {
     images: [Alerts],
     title: "Python Alerts System",
-    desc: "A simple notification system using Python.",
+    desc: "A simple notification system that triggers alerts based on defined conditions.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -522,7 +523,7 @@ const projects = [
   {
     images: [ChatBot],
     title: "Python Chatbot Console App",
-    desc: "A basic rule-based chatbot using Python.",
+    desc: "A rule-based chatbot system that responds to user input using predefined logic.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -530,7 +531,7 @@ const projects = [
   {
     images: [Grammar],
     title: "Grammar Checker Tool",
-    desc: "A rule-based grammar checking program.",
+    desc: "A rule-based program designed to identify and validate basic grammar structures.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -538,7 +539,7 @@ const projects = [
   {
     images: [GrinProgram],
     title: "Grin Utility Program",
-    desc: "A simple utility program using structured Python.",
+    desc: "A structured Python utility application for performing automated basic tasks.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -546,7 +547,7 @@ const projects = [
   {
     images: [MutantRPG],
     title: "Mutant RPG Console Game",
-    desc: "A text-based RPG with combat and decision mechanics.",
+    desc: "A text-based RPG featuring combat mechanics and decision-driven gameplay.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -554,7 +555,7 @@ const projects = [
   {
     images: [MyAnimalDictionary],
     title: "My Animal Dictionary",
-    desc: "A terminal app for storing and retrieving animal data.",
+    desc: "A terminal-based dictionary system for storing and retrieving animal information.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -562,7 +563,7 @@ const projects = [
   {
     images: [PersonalData],
     title: "Personal Data Management System",
-    desc: "A CLI system for managing personal records.",
+    desc: "A CLI-based system for organizing and managing structured personal records.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -570,7 +571,7 @@ const projects = [
   {
     images: [QueenState],
     title: "Queen State Problem Solver",
-    desc: "A logic-based problem-solving algorithm in Python.",
+    desc: "A logic-based algorithm solving computational problem scenarios in Python.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -578,7 +579,7 @@ const projects = [
   {
     images: [Registration],
     title: "Student Registration System",
-    desc: "A CLI system for managing student enrollment data.",
+    desc: "A CLI system for managing student enrollment and registration records.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default"],
@@ -586,7 +587,7 @@ const projects = [
   {
     images: [TkinterForm],
     title: "Python Tkinter Form App",
-    desc: "A GUI form application using Python Tkinter.",
+    desc: "A GUI-based form application built using Python Tkinter framework.",
     category: "CLI",
     link: "#",
     tools: ["PyCharm", "Python", "CLI", "Default", "Tkinter"],
@@ -595,7 +596,7 @@ const projects = [
   {
     images: [MyRecipe],
     title: "My Recipe",
-    desc: "A mobile recipe app with offline storage, OCR scanning, and categorized recipes.",
+    desc: "A mobile recipe application with offline storage, OCR scanning, and categorized recipe management.",
     category: "Mobile",
     link: "#",
     tools: ["ReactNative", "SQLite", "Expo"],
@@ -604,7 +605,7 @@ const projects = [
   {
     images: [ComputerMatchMakingGame],
     title: "Computer Matchmaking Game",
-    desc: "An educational game matching computer parts with functions.",
+    desc: "An educational game that matches computer components with their correct functions.",
     category: "Games",
     link: "#",
     tools: ["Python", "PyCharm"],
@@ -612,7 +613,7 @@ const projects = [
   {
     images: [FoodMatchMakingGame],
     title: "Food Matching Game",
-    desc: "A memory game matching food items and categories.",
+    desc: "A memory-based game that challenges users to correctly match food items and categories.",
     category: "Games",
     link: "#",
     tools: ["Python", "PyCharm"],
@@ -620,7 +621,7 @@ const projects = [
   {
     images: [PlatformerGame],
     title: "2D Platformer Game",
-    desc: "A simple platformer with movement, levels, and obstacles.",
+    desc: "A simple platformer game featuring movement mechanics, levels, and obstacle challenges.",
     category: "Games",
     link: "#",
     tools: ["Python", "PyCharm"],
@@ -629,7 +630,7 @@ const projects = [
   {
     images: [CO2ConcentrationIndicator],
     title: "CO₂ Concentration Indicator",
-    desc: "An IoT system for monitoring CO₂ levels using sensors.",
+    desc: "An Arduino-based system for monitoring and displaying CO₂ levels using sensors.",
     category: "IoT",
     link: "https://www.tinkercad.com/things/e9VWD5oKaWQ-co2-concentration-indicator",
     tools: ["Arduino", "Cpp", "Tinkercad"],
@@ -637,7 +638,7 @@ const projects = [
   {
     images: [FireAlarmDetector],
     title: "Fire Alarm Detection System",
-    desc: "An Arduino system that detects smoke or heat and triggers alerts.",
+    desc: "An IoT safety system that detects smoke or heat and triggers automated alerts.",
     category: "IoT",
     link: "https://www.tinkercad.com/things/1C9Lt3EVcvF-fire-alarm-detector?sharecode=y9_IcFXJ0J53n5E_jCF_o9ZP1jzKUJrHCd5DhQS1Z4c",
     tools: ["Arduino", "Cpp", "Tinkercad"],
@@ -645,7 +646,7 @@ const projects = [
   {
     images: [HelloWorldLCD],
     title: "LCD Display System",
-    desc: "A basic Arduino project displaying text on LCD.",
+    desc: "A basic Arduino project that displays real-time text output on an LCD screen.",
     category: "IoT",
     link: "https://www.tinkercad.com/things/4KuG9XeFVnx-hello-world-16-x-2",
     tools: ["Arduino", "Cpp", "Tinkercad"],
@@ -653,7 +654,7 @@ const projects = [
   {
     images: [ObstacleDetector],
     title: "Obstacle Detection System",
-    desc: "An IoT system that detects obstacles using ultrasonic sensors.",
+    desc: "An IoT system that detects nearby objects using ultrasonic sensor technology.",
     category: "IoT",
     link: "https://www.tinkercad.com/things/fmVng5FDEzT-obstacle-detector",
     tools: ["Arduino", "Cpp", "Tinkercad"],
@@ -661,7 +662,7 @@ const projects = [
   {
     images: [WeatherStation],
     title: "Smart Weather Station",
-    desc: "An IoT system tracking temperature and humidity in real time.",
+    desc: "An IoT system that monitors temperature and humidity in real time.",
     category: "IoT",
     link: "https://www.tinkercad.com/things/iN7GpE38AWv-weather-station",
     tools: ["Arduino", "Cpp", "Tinkercad"],
@@ -670,7 +671,7 @@ const projects = [
   {
     images: [SmartPathFITDFDLEVEL2],
     title: "Smart PathFIT System DFD - Level 2",
-    desc: "A data flow diagram of the Smart PathFIT system processes.",
+    desc: "A detailed data flow diagram illustrating system processes and data movement.",
     category: "Diagrams",
     link: "#",
     tools: ["Diagram"],
@@ -678,7 +679,7 @@ const projects = [
   {
     images: [SmartBurialDFDLEVEL2],
     title: "Smart Burial System DFD - Level 2",
-    desc: "A data flow diagram of the Smart Burial system processes.",
+    desc: "A structured data flow diagram representing system process architecture.",
     category: "Diagrams",
     link: "#",
     tools: ["Diagram"],
@@ -725,12 +726,12 @@ function Projects({ expanded }: { expanded: boolean }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
 
             {/* Text */}
-            <div className="text-justify absolute bottom-0 z-20 p-3 text-white">
+            <div className="text-left absolute bottom-0 z-20 p-3 text-white">
               <h3 className="font-semibold drop-shadow-md">
                 {projects[activeIndex].title}
               </h3>
 
-              <p className="mt-1 text-sm text-gray-200 drop-shadow-md">
+              <p className="text-xs leading-snug text-white/90 line-clamp-2 drop-shadow-md">
                 {projects[activeIndex].desc}
               </p>
             </div>
@@ -796,7 +797,7 @@ function Projects({ expanded }: { expanded: boolean }) {
                     </a>
                   )}
                 </div>
-                <div className="text-center md:text-justify">
+                <div className="text-left">
                   <div className="flex gap-2 justify-center text-2xl border-b-1 border-t-1 p-3 flex-wrap">
                     {project.tools?.map((tool, i) => (
                       <div
@@ -807,9 +808,12 @@ function Projects({ expanded }: { expanded: boolean }) {
                       </div>
                     ))}
                   </div>
+
                   <div className="p-5">
                     <h3 className="font-semibold">{project.title}</h3>
-                    <p className="mt-1 text-gray-600 text-sm">{project.desc}</p>
+                    <p className="mt-1 text-gray-600 text-sm leading-snug">
+                      {project.desc}
+                    </p>
                   </div>
                 </div>
               </div>

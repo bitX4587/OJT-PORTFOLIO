@@ -27,9 +27,14 @@ function Credentials({ expanded }: { expanded: boolean }) {
       desc: "Served as an ICpEP-SE Academic Coordinator Officer, organizing activities, coordinating schedules, and ensuring smooth team communication.",
     },
     {
-      images: [DigitalFrontierSeminar3, DigitalFrontierSeminar4],
+      images: [DigitalFrontierSeminar3],
       title: "Digital Frontier: 3 Days Seminar",
-      desc: "Attended a 3-day seminar on modern technology, covering hardware basics, networking fundamentals, and web & app development with certifications.",
+      desc: "Participated in a 3-day seminar covering hardware basics, networking fundamentals, and web & mobile development.",
+    },
+    {
+      images: [DigitalFrontierSeminar4],
+      title: "Digital Frontier: Event Organizer & Officer",
+      desc: "Served as an organizer and officer during the seminar, assisting in coordination and event execution.",
     },
     {
       images: [ICpEP7thRegionalEvent1, ICpEP7thRegionalEvent2],
@@ -48,7 +53,7 @@ function Credentials({ expanded }: { expanded: boolean }) {
     },
     {
       images: [ROTC4, ROTC, ROTC6],
-      title: "Reserve Officers' Training Corps (ROTC)",
+      title: "Reserve Officers' Training Corps",
       desc: "Served as ROTC cadet focused on discipline, leadership, and teamwork, and received a Duty of Honor Certificate.",
     },
   ];
@@ -77,12 +82,15 @@ function Credentials({ expanded }: { expanded: boolean }) {
           <div className=" rounded-b-4xl absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10" />
 
           {/* Text content */}
-          <div className="absolute bottom-0 z-20 p-4 text-justify text-white">
+          <div className="absolute bottom-0 z-20 p-4 text-left text-white">
             <h3 className="font-semibold" style={textShadow}>
               {activeItem.title}
             </h3>
 
-            <p className="mt-1 text-sm" style={textShadow}>
+            <p
+              className="text-xs leading-snug text-white/90 line-clamp-2"
+              style={textShadow}
+            >
               {activeItem.desc}
             </p>
           </div>
@@ -107,9 +115,11 @@ function Credentials({ expanded }: { expanded: boolean }) {
                 interactive={true}
                 showNavigation={true}
               />
-              <div className="text-center p-5 md:text-justify">
+              <div className="text-left p-5">
                 <h3 className="font-semibold">{project.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{project.desc}</p>
+                <p className="mt-2 text-sm text-gray-600 leading-snug">
+                  {project.desc}
+                </p>
               </div>
             </div>
           ))}

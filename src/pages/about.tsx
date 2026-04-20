@@ -170,7 +170,7 @@ function About({ expanded }: { expanded: boolean }) {
               <h3 className="text-gray-500 mb-1 text-xs md:text-sm">
                 {profile.name}
               </h3>
-              <p className="text-gray-600 text-justify text-xs max-h-16 md:max-h-full overflow-y-auto pr-1">
+              <p className="text-gray-600 text-left text-xs max-h-16 md:max-h-full overflow-y-auto pr-1 leading-snug">
                 {profile.summary}
               </p>
             </div>
