@@ -6,7 +6,7 @@ function Header({
   onBack?: () => void;
 }) {
   return (
-    <div className="sticky top-0 left-0 w-full z-50 p-2 bg-gray-900 ">
+    <div className="sticky top-0 left-0 border-b-1 border-white/10 w-full z-50 p-2 bg-gray-900 ">
       <div
         className={`max-w-5xl mx-auto flex items-center font-bold ${showBack ? "justify-between" : "justify-center"}`}
       >

@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="p-3 bg-gray-900 text-center text-sm text-gray-400">
+    <div className="p-3 bg-gray-900 border-t-1 border-white/10 text-center text-sm text-gray-400">
       © {new Date().getFullYear()} Mark Daniel Partoza. All rights reserved.
     </div>
   );
