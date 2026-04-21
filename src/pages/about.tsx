@@ -12,24 +12,57 @@ const profile = {
   summary:
     "Software developer with over 3 years of experience in creating high-impact Websites/Web Apps, IoT & Simulations, Mobile Apps, Games, and Designs. I specialize in creating responsive, user-friendly interfaces using modern web technologies and frameworks.",
   skills: [
+    // Core Web
     "HTML",
     "CSS",
     "JavaScript",
-    "TypeScript",
     "PHP",
-    "SQL",
+    "TypeScript",
+
+    // Frontend
     "React",
+    "React Native (Expo)",
     "Tailwind CSS",
     "Bootstrap",
-    "Express.js",
+    "Responsive Design",
+
+    // Backend
     "Node.js",
-    "React Native (Expo)",
+    "Express.js",
+    "API Integration",
+    "Socket.io",
+
+    // Database
+    "MySQL",
+    "MongoDB",
     "SQLite",
-    "Firebase",
+    "Firebase (Firestore)",
+
+    // Programming Languages
+    "Python",
+    "Java",
+    "C",
+    "C++",
+
+    // Game Dev
+    "Godot (GDScript)",
+    "Python (Pygame)",
+    "Unity (C#)",
+
+    // IoT / Hardware
+    "Arduino",
+
+    // Tools & DevOps
     "Git",
     "GitHub",
-    "API Integration",
-    "Responsive Design",
+    "Xendit",
+
+    // IDEs
+    "VS Code",
+    "Sublime Text",
+    "Eclipse",
+    "PyCharm",
+    "Dev-C++",
   ],
   experience: [
     {
@@ -297,7 +330,7 @@ function About({ expanded }: { expanded: boolean }) {
                 {profile.skills.map((s) => (
                   <span
                     key={s}
-                    className="text-xs border border-gray-700 text-gray-400 px-2.5 py-1 rounded-full"
+                    className="text-xs border border-gray-700 text-gray-400 px-2.5 py-1 rounded-full transition-all duration-200 hover:scale-105 hover:border-blue-500 hover:text-white hover:bg-blue-500/10 cursor-pointer"
                   >
                     {s}
                   </span>
