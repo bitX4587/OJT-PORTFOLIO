@@ -287,7 +287,7 @@ const projects = [
     title: "BitX4587 - First Website Portfolio",
     desc: "An early portfolio project demonstrating foundational skills in web development and layout design.",
     category: "Website",
-    link: "https://bitx4587.github.io/PORTFOLIO-1/",
+    link: "https://bitx4587.github.io/PORTFOLIO_1/",
     tools: ["HTML", "CSS", "JavaScript", "GitHub"],
   },
   {
@@ -301,7 +301,7 @@ const projects = [
     title: "Anime Page",
     desc: "A responsive anime-themed website featuring interactive UI components and dynamic layout design.",
     category: "Website",
-    link: "https://bitx4587.github.io/ANIME-WEBSITE/",
+    link: "https://bitx4587.github.io/ANIME_WORLD/",
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
@@ -317,7 +317,7 @@ const projects = [
     title: "FreshNest E-Commerce",
     desc: "A modern e-commerce interface designed for product browsing, display, and seamless user navigation.",
     category: "Website",
-    link: "https://bitx4587.github.io/E-Grocery",
+    link: "https://bitx4587.github.io/FRESHNEST_E-GROCERY/",
     tools: ["HTML", "JavaScript", "Tailwind", "GitHub"],
   },
   {
@@ -419,7 +419,7 @@ const projects = [
     title: "Smart Weather",
     desc: "A weather application providing real-time updates and forecasts with a clean and responsive interface.",
     category: "Website",
-    link: "https://bitx4587.github.io/Weather-App/",
+    link: "https://bitx4587.github.io/SMART_WEATHER_APP/",
     tools: ["HTML", "Tailwind", "JavaScript", "GitHub"],
   },
 
