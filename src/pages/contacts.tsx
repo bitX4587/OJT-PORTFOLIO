@@ -1,6 +1,6 @@
 import {
   FaFacebook,
-  FaInstagram,
+  FaGithub,
   FaLinkedin,
   FaDiscord,
   FaReddit,
@@ -23,13 +23,6 @@ function Contacts() {
             className="w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full hover:scale-110 transition"
           >
             <FaFacebook size={24} />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.instagram.com/llemaurc/"
-            className="w-12 h-12 flex items-center justify-center bg-pink-500 text-white rounded-full hover:scale-110 transition"
-          >
-            <FaInstagram size={24} />
           </a>
           <a
             target="_blank"
@@ -72,6 +65,13 @@ function Contacts() {
             className="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full hover:scale-110 transition"
           >
             <FaWhatsapp size={24} />
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/bitX4587/"
+            className="w-12 h-12 flex items-center justify-center bg-black text-white rounded-full hover:scale-110 transition"
+          >
+            <FaGithub size={24} />
           </a>
         </div>
 

@@ -130,10 +130,12 @@ import PlatformerGame from "../assets/projects/Games/Platformer Game.png";
 
 // IoT Projects
 import CO2ConcentrationIndicator from "../assets/projects/Simulation/CO2 Concentration Indicator.png";
-import FireAlarmDetector from "../assets/projects/Simulation/Fire Alarm Detector.png";
 import HelloWorldLCD from "../assets/projects/Simulation/Hello World 16 x 2.png";
 import ObstacleDetector from "../assets/projects/Simulation/Obstacle Detector.png";
 import WeatherStation from "../assets/projects/Simulation/Weather Station.png";
+import FireAlert1 from "../assets/projects/Simulation/FireAlert/img1.jpg";
+import FireAlert2 from "../assets/projects/Simulation/FireAlert/img2.jpg";
+import FireAlert3 from "../assets/projects/Simulation/FireAlert/img3.jpg";
 
 // Mobile Projects
 import MyRecipe from "../assets/projects/Mobiles/My Recipe.jpg";
@@ -241,7 +243,7 @@ const projects = [
     title: "Barangay Information System",
     desc: "A web-based system for managing barangay records, improving data organization, and streamlining information access.",
     category: "Website",
-    link: "a",
+    link: "#",
     tools: [
       "HTML",
       "Bootstrap",
@@ -636,7 +638,7 @@ const projects = [
     tools: ["Arduino", "Cpp", "Tinkercad"],
   },
   {
-    images: [FireAlarmDetector],
+    images: [FireAlert1, FireAlert2, FireAlert3],
     title: "Fire Alarm Detection System",
     desc: "An IoT safety system that detects smoke or heat and triggers automated alerts.",
     category: "IoT",
